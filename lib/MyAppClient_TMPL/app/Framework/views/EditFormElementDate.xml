@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="Container">
+		<View class="DateContainer" onClick="openDatePicker">
+			<Label id="FormElementDate"/>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

@@ -1,0 +1,7 @@
+{
+	"name" : "{{APP_NAME}}Config",
+	"description" : "JSEE generated {{APP_NAME}} configuration",
+	"main" : "{{APP_NAME}}Config.js",
+	"dependencies" : { "{{APP_NAME}}":"0.0.1" },
+	"engines" : { "node": ">= 0.8.0" }
+}

@@ -1,0 +1,28 @@
+<Alloy>
+	<View id="RootView">
+		<ScrollView id="EditFormScrollView">
+			
+			<View class="SectionTitleView"><Label class="SectionTitleLabel" text="Titanium.Locale.getString('{{segment_joined}}_{{entity_joined}}')"/></View>
+			
+			<View id="{{segment_joined}}_{{entity_joined}}_Container" class="SectionContainer">
+				
+				<!-- {{segment_joined}}/{{entity_joined}}.{{primary_key_joined}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment_joined}}/{{entity_joined}}/{{#Uc_first}}{{primary_key_joined}}{{/Uc_first}}" id="{{segment_joined}}_{{entity_joined}}_{{primary_key_joined}}_EditForm"/> <!-- read only -->
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{#Fields_joined}}
+				<!-- {{segment_joined}}/{{entity_joined}}.{{fieldName}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment_joined}}/{{entity_joined}}/{{#Uc_first}}{{fieldName}}{{/Uc_first}}" id="{{segment_joined}}_{{entity_joined}}_{{fieldName}}_EditForm"/>
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{/Fields_joined}}
+				
+			</View>
+			
+		</ScrollView>
+	</View>
+</Alloy>

@@ -1,0 +1,13 @@
+<Alloy>
+	<View id="Container">
+		<View id="Background"></View>
+		<View id="Wrapper">
+			<View id="PickerContainer">
+				<View id="Bar">
+					<Button id="CloseButton" onClick="hidePicker">Close</Button>
+				</View>
+				<Picker id="Picker" type="Titanium.UI.PICKER_TYPE_DATE"/>
+			</View>
+		</View>
+	</View>
+</Alloy>

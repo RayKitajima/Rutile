@@ -1,0 +1,38 @@
+
+"#Container" : {},
+
+"#Background" : {
+	top             : 0,
+	left            : 0,
+	backgroundColor : "#000",
+	opacity         : 0.50,
+},
+
+"#Wrapper" : {},
+
+"#PickerContainer" : {
+	bottom : 0,
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	backgroundColor : "#000",
+	opacity         : 1.0,
+},
+
+"#Bar" : {
+	top    : 0,
+	width  : Ti.UI.FILL,
+	height : "44dp",
+},
+
+"#CloseButton" : {
+	height : "40dp",
+	right  : "10dp",
+	width  : Ti.UI.SIZE,
+},
+
+"#Picker" : {
+	top : "44dp",
+	height : Ti.UI.SIZE,
+	backgroundColor : "blue",
+}
+

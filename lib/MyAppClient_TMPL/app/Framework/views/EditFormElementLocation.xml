@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="Container">
+		<View class="LocationContainer" onClick="openLocationPicker">
+			<Label id="FormElementLocation"/>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

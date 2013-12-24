@@ -1,0 +1,7 @@
+{
+	"name" : "{{APP_NAME}}Impl",
+	"description" : "JSEE generated {{APP_NAME}} implementation scaffold",
+	"main" : "{{APP_NAME}}Impl.js",
+	"dependencies" : { "{{APP_NAME}}":"0.0.1" },
+	"engines" : { "node": ">= 0.8.0" }
+}

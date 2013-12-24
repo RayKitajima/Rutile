@@ -1,0 +1,6 @@
+<Alloy>
+	<Window id="rootWindow" class="container">
+		<Require src="Framework/NavigationGroup" id="NavigationGroup"/>
+	</Window>
+</Alloy>
+

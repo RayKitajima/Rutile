@@ -1,0 +1,14 @@
+<Alloy>
+	<View class="Container">
+		<View class="DateContainer">
+			<View id="ContainerFrom" onClick="openDatePickerFrom">
+				<Label id="DateFrom"/>
+			</View>
+			<Label id="Between" text="Ti.Locale.getString('FrameworkTextExpDateBetween')">
+			<View id="ContainerTo" onClick="openDatePickerTo">
+				<Label id="DateTo"/>
+			</View>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

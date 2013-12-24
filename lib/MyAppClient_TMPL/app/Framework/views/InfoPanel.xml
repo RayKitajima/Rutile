@@ -1,0 +1,12 @@
+<Alloy>
+	<!--<View id="Container" onTouchmove="togglePanelByTouchmove" onClick="togglePanelByClick">-->
+	<View id="Container">
+		<View id="Back"></View>
+		<View id="Grip"></View>
+		<View id="Header">
+			<Label id="HeaderSymbol"/>
+			<Label id="HeaderText"/>
+		</View>
+		<Require src="Framework/InfoContainer" id="InfoContainer"><!-- ScrollableView -->
+	</View>
+</Alloy>

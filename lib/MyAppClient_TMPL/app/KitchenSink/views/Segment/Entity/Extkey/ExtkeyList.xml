@@ -1,0 +1,11 @@
+<Alloy>
+	<View id="RootView" class="container">
+		<ListView id="SearchResultList" defaultItemTemplate="myTemplate" onItemclick="onItemClick">
+			<Templates>
+				<ItemTemplate name="myTemplate" height="44">
+					<Label bindId="label" id="myLabel" class="labels"/>
+				</ItemTemplate>
+			</Templates>
+		</ListView>
+	</View>
+</Alloy>

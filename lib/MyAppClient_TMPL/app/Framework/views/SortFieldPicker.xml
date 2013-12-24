@@ -1,0 +1,15 @@
+<Alloy>
+	<View id="Container">
+		<View id="Background"></View>
+		<View id="Wrapper">
+			<View id="PickerContainer">
+				<View id="Bar">
+					<View id="BorderLine"></View>
+					<Require src="Framework/NaviCancelButton" id="CancelButton"/>
+					<Require src="Framework/NaviOkButton" id="OkButton"/>
+				</View>
+				<Picker id="Picker" type="Titanium.UI.PICKER_TYPE_PLAIN"/>
+			</View>
+		</View>
+	</View>
+</Alloy>

@@ -1,0 +1,16 @@
+
+".Container" : {
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+"#FormElementLabel" : {
+	left                    : "0dp",
+	width                   : Ti.UI.FILL,
+	height                  : Ti.UI.FILL,
+	color                   : '#55c',
+	font                    : { fontSize:12, fontWeight:'normal' },
+	borderWidth             : 0,
+	backgroundColor         : '#f7f7f7',
+	selectedBackgroundColor : '#f7f7f7',
+}

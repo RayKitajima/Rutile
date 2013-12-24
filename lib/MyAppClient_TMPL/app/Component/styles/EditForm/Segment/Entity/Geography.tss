@@ -1,0 +1,15 @@
+
+".Container" : {
+	left            : "10dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+	layout          : "horizontal",
+},
+
+".Title": {
+	left  : "0dp",
+	width : "95dp",
+	color : '#000',
+	font  : { fontSize:12, fontWeight:'bold' }
+},
+

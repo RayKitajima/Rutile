@@ -1,0 +1,8 @@
+<Alloy>
+	<View class="Container">
+		<View class="ExtkeyContainer" onClick="openExtkey">
+			<Label id="SelectedItemName" class="ItemLabel"/>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

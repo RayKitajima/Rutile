@@ -1,0 +1,97 @@
+
+"#NavigationGroup" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+// main menu
+
+"#MainMenu" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#MainMenuMask" : {
+	top             : "0dp",
+	width           : Ti.UI.FILL,
+	backgroundColor : "#000",
+	opacity         : 0.70,
+},
+
+"#BorderLine" : {
+	bottom          : "0dp",
+	width           : Ti.UI.FILL,
+	height          : "1dp",
+	borderWidth     : "1dp",
+	borderColor     : "#5aa902",
+},
+
+"#TitleView" : {
+	top    : "0dp",
+	left   : "88dp",
+	right  : "88dp",
+	height : "44dp",
+	width  : "144dp",
+},
+
+"#LeftButtonsView" : {
+	top    : "0dp",
+	left   : "0dp",
+	width  : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#RightButtonsView" : {
+	top    : "0dp",
+	right  : "0dp",
+	width  : "88dp",
+	backgroundColor : "#85d031",
+},
+
+// sub menu
+
+"#SubMenu" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#SubMenuMask" : {
+	top             : "0dp",
+	width           : Ti.UI.FILL,
+	backgroundColor : "#000",
+	opacity         : 0.70,
+},
+
+"#SubBorderLine" : {
+	bottom          : "0dp",
+	width           : Ti.UI.FILL,
+	height          : "1dp",
+	borderWidth     : "1dp",
+	borderColor     : "#5aa902",
+},
+
+"#SubTitleView" : {
+	top    : "0dp",
+	left   : "88dp",
+	right  : "88dp",
+	height : "44dp",
+	width  : "144dp",
+},
+
+"#SubLeftButtonsView" : {
+	top    : "0dp",
+	left   : "0dp",
+	width  : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#SubRightButtonsView" : {
+	top    : "0dp",
+	right  : "0dp",
+	width  : "88dp",
+	backgroundColor : "#85d031",
+}
+

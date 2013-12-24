@@ -1,0 +1,10 @@
+<Alloy>
+	<View id="MapView" ns="Alloy.Globals.Map" animate="false" regionFit="true" userLocation="true" mapType="Alloy.Globals.Map.NORMAL_TYPE">
+		<!-- Place other child views here, such as an ImageView to add an overlay. -->
+		<View id="BtnWrapper">
+			<View id="ZoomUpBtn" onClick="zoomUp"><Label id="UpSymbol"/></View>
+			<View id="ZoomDownBtn" onClick="zoomDown"><Label id="DownSymbol"/></View>
+		</View>
+		<View id="CentroidMarker"><Label id="MarkerSymbol"/></View>
+	</View>
+</Alloy>

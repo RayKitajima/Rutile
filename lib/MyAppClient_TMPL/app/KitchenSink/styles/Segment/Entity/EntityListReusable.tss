@@ -1,0 +1,22 @@
+
+"#RootView" : {
+	backgroundColor : "white",
+	navBarHidden    : false,
+	layout          : "vertical"
+},
+
+"ListView" : {
+},
+
+".LabelWrapper" : {
+	left      : "10dp",
+	width     : Ti.UI.FILL,
+},
+
+".Labels" : {
+	left      : "0dp",
+	width     : Ti.UI.FILL,
+	textAlign : 'left',
+	font      : { fontSize:16, fontWeight:'bold' }
+},
+

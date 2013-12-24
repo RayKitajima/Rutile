@@ -1,0 +1,26 @@
+
+"#ButtonView" : {
+	width  : "30dp",
+	height : "30dp",
+	right  : "35dp",
+},
+
+"#ButtonSymbol" : {
+	top   : "5dp",
+	left  : "7dp",
+	color : "#333baa",
+},
+
+"#ButtonFlame" : {
+	backgroundGradient : {
+		type        : "radial",
+		startPoint  : { x:"15dp", y:"15dp" },
+		endPoint    : { x:"15dp", y:"15dp" },
+		colors      : [ {color:"#f0f0f0",offset:0.0}, {color:"#333baa",offset:1.0} ],
+		startRadius : "15dp",
+		endRadius   : 0
+	},
+	top     : "0dp",
+	left    : "0dp",
+	opacity : 0.50
+}

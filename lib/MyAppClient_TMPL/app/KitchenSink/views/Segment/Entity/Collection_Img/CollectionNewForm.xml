@@ -1,0 +1,29 @@
+<Alloy>
+	<View id="RootView">
+		<ScrollView id="NewFormScrollView">
+			
+			<View class="SectionTitleView"><Label class="SectionTitleLabel" text="Titanium.Locale.getString('{{segment_collected}}_{{entity_collected}}')"/></View>
+			
+			<View id="{{segment_collected}}_{{entity_collected}}_Container" class="SectionContainer">
+				
+				<!-- {{segment_collected}}/{{entity_collected}}.{{primary_key_collected}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment_collected}}/{{entity_collected}}/{{#Uc_first}}{{primary_key_collected}}{{/Uc_first}}" id="{{segment_collected}}_{{entity_collected}}_{{primary_key_collected}}_EditForm"/>
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{#Fields_collected}}
+				<!-- {{segment_collected}}/{{entity_collected}}.{{fieldName}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment_collected}}/{{entity_collected}}/{{#Uc_first}}{{fieldName}}{{/Uc_first}}" id="{{segment_collected}}_{{entity_collected}}_{{fieldName}}_EditForm"/>
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{/Fields_collected}}
+				
+			</View>
+			
+			<View height="44dp"></View>
+		</ScrollView>
+	</View>
+</Alloy>

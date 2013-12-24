@@ -1,0 +1,11 @@
+
+".Container" : {
+	width           : Ti.UI.SIZE,
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+"#SelectedImage" : {
+	left : "10dp",
+},
+

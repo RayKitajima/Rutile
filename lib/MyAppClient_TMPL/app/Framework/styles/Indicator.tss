@@ -1,0 +1,28 @@
+
+"#Container" : {
+},
+
+"#ActivityIndicatorBack" : {
+	width           : "200dp",
+	height          : "100dp",
+	backgroundColor : "#000",
+	borderRadius    : 10,
+	opacity         : 0.75,
+},
+
+"#ActivityIndicator" : {
+	left    : "20dp",
+	right   : "20dp",
+	color   : "#fff",
+	style   : Ti.UI.iPhone.ActivityIndicatorStyle.BIG,
+	opacity : 1.0,
+},
+
+"#ActivityIndicator[platform=android]" : {
+	left    : "20dp",
+	right   : "20dp",
+	color   : "#fff",
+	style   : Ti.UI.ActivityIndicatorStyle.BIG,
+	opacity : 1.0,
+}
+

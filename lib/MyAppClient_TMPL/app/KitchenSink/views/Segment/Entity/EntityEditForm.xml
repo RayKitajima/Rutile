@@ -1,0 +1,36 @@
+<Alloy>
+	<View id="RootView">
+		<ScrollView id="EditFormScrollView">
+			
+			<!-- {{segment}}/{{entity}} -->
+			
+			<View class="SectionTitleView"><Label class="SectionTitleLabel" text="Ti.Locale.getString('{{segment}}_{{entity}}')"/></View>
+			
+			<View id="{{segment}}_{{entity}}_Container" class="SectionContainer">
+				
+				<!-- {{segment}}/{{entity}}.{{primary_key}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment}}/{{entity}}/{{#Uc_first}}{{primary_key}}{{/Uc_first}}" id="{{segment}}_{{entity}}_{{primary_key}}_EditForm"/> <!-- read only -->
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{#Fields}}
+				<!-- {{segment}}/{{entity}}.{{fieldName}} -->
+				<View class="SectionItem">
+					<Require src="Component/EditForm/{{segment}}/{{entity}}/{{#Uc_first}}{{fieldName}}{{/Uc_first}}" id="{{segment}}_{{entity}}_{{fieldName}}_EditForm"/>
+				</View>
+				<Require src="Framework/FormElementSeparator">
+				
+{{/Fields}}
+			</View>
+			
+{{#aggregation_junctions}}
+			<!-- import aggregation module : collection of {{segment_collected}}/{{entity_collected}} -->
+			<Require src="Component/EditForm/{{segment}}/{{entity}}/Collection/{{entity_collected}}" id="{{segment}}_{{entity}}_{{entity_collected}}_EditForm"/>
+			
+{{/aggregation_junctions}}
+			
+			<View height="44dp"></View>
+		</ScrollView>
+	</View>
+</Alloy>

@@ -1,0 +1,37 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".AreaContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+".Caption" : {
+	left  : "10dp",
+	width : Ti.UI.SIZE,
+	font  : { fontSize:12, fontWeight:'normal' },
+},
+
+"#AreaInfoContainer" : {
+	left   : "10dp",
+	height : Ti.UI.FILL,
+},
+
+"#AreaInfo" : {
+	left                    : "0dp",
+	height                  : Ti.UI.FILL,
+	color                   : '#55c',
+	font                    : { fontSize:12, fontWeight:'normal' },
+	borderWidth             : 0,
+	backgroundColor         : '#f7f7f7',
+	selectedBackgroundColor : '#f7f7f7',
+	keyboardType            : Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+},

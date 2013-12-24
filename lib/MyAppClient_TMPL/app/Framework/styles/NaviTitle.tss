@@ -1,0 +1,6 @@
+
+"#TitleLabel" : {
+	color  : "#fff",
+	font   : { fontSize:"18dp", fontWeight:"bold" },
+	height : "44dp",
+},

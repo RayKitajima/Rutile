@@ -1,0 +1,40 @@
+
+"#Container" : {},
+
+"#Background" : {
+	top             : 0,
+	left            : 0,
+	backgroundColor : "#000",
+	opacity         : 0.25,
+},
+
+"#Wrapper" : {},
+
+"#PickerContainer" : {
+	bottom          : 0,
+	width           : Ti.UI.SIZE,
+	height          : Ti.UI.SIZE,
+	backgroundColor : "#000",
+	opacity         : 1.0,
+},
+
+"#Bar" : {
+	top             : 0,
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#BorderLine" : {
+	top             : "0dp",
+	width           : Ti.UI.FILL,
+	height          : "1dp",
+	borderWidth     : "1dp",
+	borderColor     : "#5aa902",
+},
+
+"#Picker" : {
+	top             : "44dp",
+	height          : Ti.UI.SIZE,
+	backgroundColor : "blue",
+}
+

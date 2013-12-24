@@ -1,0 +1,11 @@
+
+"Window" : {
+	top : "20dp",
+	navBarHidden : true,
+	modal        : true
+},
+
+".container": {
+	backgroundColor : "#f0f0f0"
+}
+

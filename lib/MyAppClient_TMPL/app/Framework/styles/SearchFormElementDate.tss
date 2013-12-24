@@ -1,0 +1,49 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".DateContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+"#ContainerFrom" : {
+	left            : "10dp",
+	width           : "100dp",
+	height          : Ti.UI.FILL,
+	borderWidth     : 0,
+	backgroundColor : '#f7f7f7',
+},
+
+"#DateFrom" : {
+	left            : "0dp",
+	color           : '#55c',
+	font            : { fontSize:12, fontWeight:'normal' },
+	backgroundColor : '#f7f7f7',
+},
+
+"#Between" : {
+	width : Ti.UI.SIZE,
+},
+
+"#ContainerTo" : {
+	left            : "10dp",
+	width           : "100dp",
+	height          : Ti.UI.FILL,
+	borderWidth     : 0,
+	backgroundColor : '#f7f7f7',
+},
+
+"#DateTo" : {
+	left            : "0dp",
+	color           : '#55c',
+	font            : { fontSize:12, fontWeight:'normal' },
+	backgroundColor : '#f7f7f7',
+},
+

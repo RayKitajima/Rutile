@@ -1,0 +1,7 @@
+<Alloy>
+	<!-- {{segment}}/{{entity}}.{{fieldName}} -->
+	<View class="Container">
+		<Label class="Title" text="Ti.Locale.getString('{{segment}}_{{entity}}_{{fieldName}}')"/>
+		<Require src="Framework/EditFormElementTextField" id="{{segment}}_{{entity}}_{{fieldName}}"/>
+	</View>
+</Alloy>

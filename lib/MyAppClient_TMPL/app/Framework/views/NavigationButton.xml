@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="OkButtonView" onTouchstart="showButtonFlame" onTouchend="hideButtonFlame" onClick="clickButton">
+		<View id="OkButtonFlame" visible="false"></View>
+		<Label id="OkButtonSymbol"/>
+	</View>
+</Alloy>

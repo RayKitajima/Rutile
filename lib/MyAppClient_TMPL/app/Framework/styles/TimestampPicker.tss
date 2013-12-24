@@ -1,0 +1,52 @@
+
+"#Container" : {},
+
+"#Background" : {
+	top             : 0,
+	left            : 0,
+	backgroundColor : "#000",
+	opacity         : 0.50,
+},
+
+"#Wrapper" : {
+	left : "0dp"
+},
+
+"#PickerContainer" : {
+	bottom          : 0,
+	width           : Ti.UI.SIZE,
+	height          : Ti.UI.SIZE,
+	backgroundColor : "#000",
+	opacity         : 1.0,
+},
+
+"#Bar" : {
+	top             : 0,
+	left            : 0,
+	width           : Ti.Platform.displayCaps.platformWidth,
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#LeftButtonsView" : {
+	top             : "0dp",
+	left            : "0dp",
+	width           : "44dp",
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#RightButtonsView" : {
+	top             : "0dp",
+	right           : "0dp",
+	width           : "44dp",
+	height          : "44dp",
+	backgroundColor : "#85d031",
+},
+
+"#Body" : {
+	top    : "44dp",
+	height : Ti.UI.SIZE,
+	layout : "horizontal",
+}
+

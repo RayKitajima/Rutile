@@ -1,0 +1,9 @@
+<Alloy>
+	<View class="Container">
+		<View class="SortMethodContainer" onClick="openSortMethodPicker">
+			<Label class="Title" text="Ti.Locale.getString('FrameworkSearchFormElementSortMethod')"/>
+			<Label id="SortMethod"/>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

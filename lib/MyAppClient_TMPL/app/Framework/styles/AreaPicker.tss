@@ -1,0 +1,38 @@
+
+"#MapView" : {},
+
+"#BtnWrapper" : {
+	backgroundColor : "#000",
+	opacity         : "0.75",
+	top             : "40dp",
+	left            : "0dp",
+	height          : "80dp",
+	width           : "45dp",
+},
+
+"#ZoomUpBtn" : {
+	width  : "40dp",
+	height : "40dp",
+	left   : "0dp",
+	top    : "5dp"
+},
+
+"#ZoomDownBtn" : {
+	width  : "40dp",
+	height : "40dp",
+	left   : "0dp",
+	top    : "40dp"
+},
+
+"#UpSymbol" : {
+	color : "#fff",
+},
+
+"#DownSymbol" : {
+	color : "#fff",
+},
+
+"#CentroidMarker" : {
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+},

@@ -1,0 +1,15 @@
+
+"#RootView" : {
+	navBarHidden: true,
+	backgroundColor : "#fff"
+},
+
+".labels" : {
+	width: Ti.UI.FILL,
+	left: 10,
+	textAlign: 'left',
+	font: {
+		fontSize: 16,
+		fontWeight: 'bold'
+	}
+}

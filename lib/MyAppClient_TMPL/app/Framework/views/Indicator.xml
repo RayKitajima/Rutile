@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="Container" visible="false">
+		<View id="ActivityIndicatorBack"></View>
+		<ActivityIndicator id="ActivityIndicator"/>
+	</View>
+</Alloy>

@@ -1,0 +1,10 @@
+<Alloy>
+	<View class="Container">
+		<View class="NumContainer">
+			<TextField id="SearchElementMin" onReturn="closeKeyboard" hintText="Ti.Locale.getString('FrameworkSearchFormElementNumMin')"/>
+			<Label id="Between" text="Ti.Locale.getString('FrameworkTextExpNumberBetween')">
+			<TextField id="SearchElementMax" onReturn="closeKeyboard" hintText="Ti.Locale.getString('FrameworkSearchFormElementNumMax')"/>
+		</View>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

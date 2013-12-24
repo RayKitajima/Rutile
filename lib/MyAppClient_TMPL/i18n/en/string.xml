@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+{{#Segments}}
+<!-- {{name}} -->
+<string name="{{name}}">{{ui_segmentName}}</string>
+{{#Entities}}
+<!-- {{segmentName}}/{{entityName}} -->
+<string name="{{segmentName}}_{{entityName}}">{{ui_entityName}}</string>
+{{#Fields}}
+<string name="{{segmentName}}_{{entityName}}_{{fieldName}}">{{ui_fieldName}}</string>
+{{/Fields}}
+{{/Entities}}
+{{/Segments}}
+
+<!-- Framework:messages -->
+<string name="FrameworkMessageSave">Save</string>
+<string name="FrameworkMessageRemove">Remove</string>
+<string name="FrameworkMessageCancel">Cancel</string>
+<string name="FrameworkMessageRemoveConfirmationText">Are you sure you want to remove selected items?</string>
+<string name="FrameworkMessageNoticeCollectionRemoval">(Notice, collection table will be removed, but collected items does not removed.)</string>
+<string name="FrameworkMessageSaveConfirmationText">Are you sure to you want to save?</string>
+<string name="FrameworkTitleEntity">Entity List</string>
+<string name="FrameworkTitleFormatEditForm">Edit %s</string>
+<string name="FrameworkTitleFormatEditFormReadonly">%s</string>
+<string name="FrameworkTitleFormatEditFormEditable">Edit %s</string>
+<string name="FrameworkTitleFormatNewForm">New %s</string>
+<string name="FrameworkTitleFormatSearchFormView">%s Search</string>
+<string name="FrameworkTitleFormatListView">%s List</string>
+<string name="FrameworkTitleFormatPicker">%s Picker</string>
+<string name="FrameworkSubTitleFormatListView">Remove %s</string>
+<string name="FrameworkIndicatorSavingMessage">Saving...</string>
+<string name="FrameworkIndicatorLoadingMessage">Loading...</string>
+<string name="FrameworkIndicatorSearchingMessage">Searching...</string>
+<string name="FrameworkGeolocationUnderReverseGeocoding">Looking up address...</string>
+<!-- Framework:EditForm -->
+<string name="FrameworkSelectorBranchDescLabel">How to select %s:</string>
+<string name="FrameworkSelectorBranchNewLabel">Create new one</string>
+<string name="FrameworkSelectorBranchSearchLabel">Search</string>
+<string name="FrameworkSelectorBranchListLabel">Select from list</string>
+<string name="FrameworkSelectorBranchCancelLabel">Cancel</string>
+<string name="FrameworkEditFormElementDate">Date</string>
+<string name="FrameworkEditFormElementTime">Time</string>
+<string name="FrameworkEditFormElementTimestamp">Timestamp</string>
+<!-- Framework:EditForm:ValidateHintText -->
+<string name="FrameworkEditFormValidateAutoFill">Auto</string>
+<string name="FrameworkEditFormValidateNotNull">Must</string>
+<string name="FrameworkEditFormValidatePositiveValue">Positive</string>
+<string name="FrameworkEditFormValidateNegativeValue">Negative</string>
+<string name="FrameworkEditFormValidateTimestampString">Time</string>
+<string name="FrameworkEditFormValidateDateString">Date</string>
+<string name="FrameworkEditFormValidatePoint">Point</string>
+<string name="FrameworkEditFormValidateArea">Area</string>
+<string name="FrameworkEditFormValidateEmailString">Email</string>
+<string name="FrameworkEditFormValidateEscapedHtmlTag">Html Tag will escaped</string>
+<!-- Framework:SearchForm -->
+<string name="FrameworkSearchFormElementKey">Match full</string>
+<string name="FrameworkSearchFormElementLike">Match partial</string>
+<string name="FrameworkSearchFormElementNum">Numbers</string>
+<string name="FrameworkSearchFormElementNumMin">Min</string>
+<string name="FrameworkSearchFormElementNumMax">Max</string>
+<string name="FrameworkSearchFormElementDate">Date</string>
+<string name="FrameworkSearchFormElementDateFrom">Start</string>
+<string name="FrameworkSearchFormElementDateTo">End</string>
+<string name="FrameworkSearchFormElementTimestamp">Timestamp</string>
+<string name="FrameworkSearchFormElementTimestampFrom">Start</string>
+<string name="FrameworkSearchFormElementTimestampTo">End</string>
+<string name="FrameworkSearchFormElementNearbyCentroid">Centroid by Map</string>
+<string name="FrameworkSearchFormElementNearbyDistanceMeter">meter</string>
+<string name="FrameworkSearchFormElementArea">Area by Map</string>
+<string name="FrameworkSearchFormElementOrderby">Sort</string>
+<string name="FrameworkSearchFormElementSortField">Field</string>
+<string name="FrameworkSearchFormElementSortFieldHint">Select one</string>
+<string name="FrameworkSearchFormElementSortMethod">Method</string>
+<string name="FrameworkSearchFormElementSortMethodHint">Select one</string>
+<string name="FrameworkSearchFormElementSortMethodDesc">Descending</string>
+<string name="FrameworkSearchFormElementSortMethodAsc">Ascending</string>
+<string name="FrameworkSearchFormElementSearchLogic">Search Method</string>
+<string name="FrameworkSearchFormElementSearchLogicAND">All of</string>
+<string name="FrameworkSearchFormElementSearchLogicOR">Any of</string>
+<string name="FrameworkSearchFormSearch">Search</string>
+<string name="FrameworkTextExpNumberBetween"> - </string>
+<string name="FrameworkTextExpTimestampBetween"> - </string>
+<string name="FrameworkTextExpNearbyCentroid">Centroid</string>
+<string name="FrameworkTextExpNearbyDistance">Distance</string>
+<string name="FrameworkTextExpArea">Area</string>
+<string name="FrameworkTextExpSelectionAND">All of</string>
+<string name="FrameworkTextExpSelectionOR">Any of</string>
+<string name="FrameworkTextExpSearchTypeKey">Match full</string>
+<string name="FrameworkTextExpSearchTypeLike">Match partial</string>
+<string name="FrameworkTextExpSearchTypeNum">Numbers</string>
+<string name="FrameworkTextExpSearchTypeDate">Date</string>
+<string name="FrameworkTextExpSearchTypeTimestamp">Timestamp</string>
+<string name="FrameworkTextExpSearchTypeNearby">Near by</string>
+<string name="FrameworkTextExpSearchTypeNearbyCentroid">Near %s</string>
+<string name="FrameworkTextExpSearchTypeNearbyCentroidDistance">Near %s within %sm</string>
+<string name="FrameworkTextExpSearchTypeArea">Area</string>
+<string name="FrameworkTextExpSearchTypeAreaCentroid">Around %s</string>
+<string name="FrameworkTextExpSearchTypeAreaCentroidWidth">Around %s (%sm)</string>
+<string name="FrameworkTextExpSelectAll">Select all</string>
+<string name="FrameworkQuerySummaryHeaderText">Summary of search query</string>
+
+</resources>

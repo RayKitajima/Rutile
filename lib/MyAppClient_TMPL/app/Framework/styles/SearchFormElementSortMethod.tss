@@ -1,0 +1,34 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".SortMethodContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+".Title": {
+	left  : "10dp",
+	width : "75dp",
+	color : '#000',
+	font  : { fontSize:12, fontWeight:'bold' }
+},
+
+"#SortMethod" : {
+	left                    : "10dp",
+	width                   : Ti.UI.FILL,
+	height                  : Ti.UI.FILL,
+	color                   : '#55c',
+	font                    : { fontSize:12, fontWeight:'normal' },
+	borderWidth             : 0,
+	backgroundColor         : '#f7f7f7',
+	selectedBackgroundColor : '#f7f7f7',
+	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+}
+

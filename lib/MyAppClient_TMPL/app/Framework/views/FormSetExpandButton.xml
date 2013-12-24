@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="ButtonView" onClick="clickButton">
+		<Label id="OpenButtonSymbol"/>
+		<Label id="CloseButtonSymbol"/>
+	</View>
+</Alloy>

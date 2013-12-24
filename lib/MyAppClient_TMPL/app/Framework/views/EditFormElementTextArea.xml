@@ -1,0 +1,6 @@
+<Alloy>
+	<View class="Container">
+		<TextArea id="FormElementTextArea"/>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

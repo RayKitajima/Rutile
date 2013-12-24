@@ -1,0 +1,6 @@
+
+# ignore osx meta data
+.DS_Store
+Icon?
+*~
+

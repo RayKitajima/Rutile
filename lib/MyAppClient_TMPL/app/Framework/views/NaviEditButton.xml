@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="ButtonView" onTouchstart="showButtonFlame" onTouchend="hideButtonFlame" onClick="clickButton">
+		<View id="ButtonFlame" visible="false"></View>
+		<Label id="ButtonSymbol"/>
+	</View>
+</Alloy>

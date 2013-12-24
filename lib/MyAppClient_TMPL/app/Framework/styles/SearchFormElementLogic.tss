@@ -1,0 +1,11 @@
+
+"View" : {
+	width  : Ti.UI.SIZE,
+	height : Ti.UI.SIZE,
+	layout : "horizontal",
+},
+
+".Container" : {
+	left : "0dp",
+},
+

@@ -1,0 +1,6 @@
+<Alloy>
+	<View class="Container">
+		<!-- read only -->
+		<Label id="FormElementLabel"/>
+	</View>
+</Alloy>

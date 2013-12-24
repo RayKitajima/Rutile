@@ -1,0 +1,6 @@
+<Alloy>
+	<View class="Container">
+		<TextField id="FormElementTextField" onReturn="closeKeyboard" hintText="Ti.Locale.getString('FrameworkSearchFormElementLike')"/>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

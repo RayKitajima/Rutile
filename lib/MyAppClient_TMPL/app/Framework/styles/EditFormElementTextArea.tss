@@ -1,0 +1,25 @@
+
+".Container" : {
+	backgroundColor : "#f7f7f7",
+},
+
+"#FormElementTextArea" : {
+	top                     : "13dp",
+	left                    : "0dp",
+	right                   : "10dp",
+	bottom                  : "13dp",
+	width                   : Ti.UI.FILL,
+	height                  : Ti.UI.FILL,
+	color                   : '#55c',
+	font                    : { fontSize:12, fontWeight:'normal' },
+	borderWidth             : 1,
+	borderColor             : '#ccc',
+	borderRadius            : 5,
+	backgroundColor         : '#f7f7f7',
+	selectedBackgroundColor : '#f7f7f7',
+	keyboardType            : Ti.UI.KEYBOARD_DEFAULT,
+    returnKeyType           : Titanium.UI.RETURNKEY_CLOSE,
+    suppressReturn          : false,
+	textAlign               : Ti.UI.TEXT_ALIGNMENT_LEFT,
+	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
+}

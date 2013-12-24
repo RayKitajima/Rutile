@@ -1,0 +1,15 @@
+<!-- key -->
+<Alloy>
+	<!-- {{constraint_segment}}/{{constraint_entity}}.{{constraint_fieldName}}({{search_type}}) -->
+	<View class="Header" layout="horizontal">
+		<Label class="Title" text="Ti.Locale.getString('{{constraint_segment}}_{{constraint_entity}}_{{constraint_fieldName}}')"/>
+		<Label class="SubTitle" text="(" left="5dp"/>
+		<Label class="SubTitle" text="Ti.Locale.getString('FrameworkTextExpSearchTypeKey')"/>
+		<Label class="SubTitle" text=")"/>
+	</View>
+	<View class="Panel">
+		<Require src="Framework/SearchFormElementLogic" id="LogicSelector"/>
+		<Require src="Framework/FieldAddButton" id="AddButton"/>
+	</View>
+	<View id="Elements" class="Container"></View>
+</Alloy>

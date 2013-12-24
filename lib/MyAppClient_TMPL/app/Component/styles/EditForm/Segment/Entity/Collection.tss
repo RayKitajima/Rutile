@@ -1,0 +1,21 @@
+
+".SectionTitleView" : {
+	top    : "10dp",
+	width  : "95%",
+	height : Ti.UI.SIZE,
+},
+
+".SectionTitleLabel" : {
+	left  : "5dp",
+	color : "#229"
+},
+
+".SectionContainer" : {
+	borderWidth  : "1dp",
+	borderColor  : "#a0a0a0",
+	borderRadius : "4dp",
+	top          : "10dp",
+	width        : "95%",
+	height       : Ti.UI.SIZE,
+	layout       : "vertical",
+},

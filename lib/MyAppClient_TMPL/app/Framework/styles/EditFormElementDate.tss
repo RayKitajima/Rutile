@@ -1,0 +1,25 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".DateContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+"#FormElementDate" : {
+	left                    : "0dp",
+	width                   : Ti.UI.FILL,
+	height                  : Ti.UI.FILL,
+	color                   : '#55c',
+	font                    : { fontSize:12, fontWeight:'normal' },
+	borderWidth             : 0,
+	backgroundColor         : '#f7f7f7',
+	selectedBackgroundColor : '#f7f7f7',
+}

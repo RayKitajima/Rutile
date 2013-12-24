@@ -1,0 +1,18 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".ImageContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+"#SelectedImage" : {
+	top : "1dp",
+},

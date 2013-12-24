@@ -1,0 +1,6 @@
+<Alloy>
+	<View class="Container">
+		<TextField id="FormElementTextField" onReturn="closeKeyboard"/>
+		<Require src="Framework/FieldClearButton" id="ClearButton">
+	</View>
+</Alloy>

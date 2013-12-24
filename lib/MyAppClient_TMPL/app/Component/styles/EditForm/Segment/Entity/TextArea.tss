@@ -1,0 +1,16 @@
+
+".Container" : {
+	left            : "10dp",
+	height          : "150dp",
+	backgroundColor : "#f7f7f7",
+	layout          : "vertical",
+},
+
+".Title": {
+	top   : "13dp",
+	left  : "0dp",
+	width : Ti.UI.FILL,
+	color : '#000',
+	font  : { fontSize:12, fontWeight:'bold' }
+},
+

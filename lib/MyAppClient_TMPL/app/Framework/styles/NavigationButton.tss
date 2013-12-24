@@ -1,0 +1,26 @@
+
+"#OkButtonView" : {
+	top    : "0dp",
+	width  : "44dp",
+	height : "44dp",
+},
+
+"#OkButtonSymbol" : {
+	top   : "12dp",
+	left  : "12dp",
+	color : "#fff",
+},
+
+"#OkButtonFlame" : {
+	backgroundGradient : {
+		type        : "radial",
+		startPoint  : { x:"22dp", y:"22dp" },
+		endPoint    : { x:"22dp", y:"22dp" },
+		colors      : [ {color:"#85d031",offset:0.0}, {color:"#f5ff58",offset:1.0} ],
+		startRadius : "22dp",
+		endRadius   : 0
+	},
+	top     : "0dp",
+	left    : "0dp",
+	opacity : 0.50
+}

@@ -1,0 +1,120 @@
+
+"#Container" : {
+},
+
+"#DialogScreenMask" : {
+	backgroundColor : "#000",
+	opacity         : 0.20,
+},
+
+"#DialogBack" : {
+	width           : "250dp",
+	height          : "210dp",
+	backgroundColor : "#72b314",
+	borderRadius    : 10,
+	opacity         : 0.90,
+},
+
+"#DialogItemContainer" : {
+	width  : "250dp",
+	height : "210dp",
+	layout : 'vertical',
+},
+
+"#DescView" : {
+	top    : "10dp",
+	left   : "10dp",
+	width  : "230dp",
+	height : "30dp",
+},
+
+"#DescLabel" : {
+	left  : "10dp",
+	color : "#fff",
+	font  : { fontSize:12, fontWeight:'bold' }
+},
+
+"#NewView" : {
+	top             : "10dp",
+	left            : "10dp",
+	width           : "230dp",
+	height          : "30dp",
+	backgroundColor : "#fafafa",
+	borderRadius    : 5,
+},
+
+"#NewSymbol" : {
+	left  : "10dp",
+	color : "#333",
+},
+
+"#NewLabel" : {
+	left  : "35dp",
+	color : "#333",
+	font  : { fontSize:14, fontWeight:'bold' }
+},
+
+"#SearchView" : {
+	top             : "10dp",
+	left            : "10dp",
+	width           : "230dp",
+	height          : "30dp",
+	backgroundColor : "#fafafa",
+	borderRadius    : 5,
+},
+
+"#SearchSymbol" : {
+	left  : "10dp",
+	color : "#333",
+},
+
+"#SearchLabel" : {
+	left  : "35dp",
+	color : "#333",
+	font  : { fontSize:14, fontWeight:'bold' }
+},
+
+"#ListView" : {
+	top             : "10dp",
+	left            : "10dp",
+	width           : "230dp",
+	height          : "30dp",
+	backgroundColor : "#fafafa",
+	borderRadius    : 5,
+},
+
+"#ListSymbol" : {
+	left  : "10dp",
+	color : "#333",
+},
+
+"#ListLabel" : {
+	left  : "35dp",
+	color : "#333",
+	font  : { fontSize:14, fontWeight:'bold' }
+},
+
+"#CancelView" : {
+	top             : "10dp",
+	left            : "10dp",
+	width           : "230dp",
+	height          : "30dp",
+	backgroundColor : "#dbe140",
+	borderRadius    : 5,
+},
+
+"#CancelLabel" : {
+	color : "#333",
+	font  : { fontSize:14, fontWeight:'bold' }
+},
+
+".DialogItem" : {
+	left    : "20dp",
+	right   : "20dp",
+	color   : "#333",
+	style   : Ti.UI.iPhone.ActivityIndicatorStyle.BIG,
+	opacity : 1.0,
+},
+
+".ItemIcon" : {
+}

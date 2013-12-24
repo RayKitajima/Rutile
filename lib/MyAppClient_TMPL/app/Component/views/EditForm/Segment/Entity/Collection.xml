@@ -1,0 +1,10 @@
+<Alloy>
+	<!-- collection : {{segment_collected}}/{{entity_collected}} -->
+	<View class="SectionTitleView">
+		<Label class="SectionTitleLabel" text="Ti.Locale.getString('{{segment_collected}}_{{entity_collected}}')"/>
+		<Require src="Framework/FieldAddButton" id="AddButton"/>
+	</View>
+	<View id="Elements" class="SectionContainer">
+		<!-- containing Framework/EditformElementExtentity with ExtentityElements -->
+	</View>
+</Alloy>

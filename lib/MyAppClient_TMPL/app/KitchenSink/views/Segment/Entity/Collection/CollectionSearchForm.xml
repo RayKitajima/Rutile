@@ -1,0 +1,37 @@
+<Alloy>
+	<View id="RootView">
+		<ScrollView id="SearchFormScrollView">
+			
+{{#PrimaryKeySearches_collected}}{{#search_types}}
+			<!-- {{segment_collected}}/{{entity_collected}}.{{fieldName}}({{search_type}}) -->
+			<Require src="Component/SearchForm/{{segment_collected}}/{{entity_collected}}/Selectby{{entity_collected}}{{#Uc_first}}{{fieldName}}{{/Uc_first}}{{#Uc_first}}{{search_type}}{{/Uc_first}}" id="{{segment_collected}}_{{entity_collected}}_{{fieldName}}_{{search_type}}_SearchForm"/>
+			<View height="10dp"></View>
+			<Require src="Framework/FormElementSeparator">
+			
+{{/search_types}}{{/PrimaryKeySearches_collected}}
+{{#Fields_collected}}{{#search_types}}
+			<!-- {{segment_collected}}/{{entity_collected}}.{{fieldName}}({{search_type}}) -->
+			<Require src="Component/SearchForm/{{segment_collected}}/{{entity_collected}}/Selectby{{entity_collected}}{{#Uc_first}}{{fieldName}}{{/Uc_first}}{{#Uc_first}}{{search_type}}{{/Uc_first}}" id="{{segment_collected}}_{{entity_collected}}_{{fieldName}}_{{search_type}}_SearchForm"/>
+			<View height="10dp"></View>
+			<Require src="Framework/FormElementSeparator">
+			
+{{/search_types}}{{/Fields_collected}}
+{{#hasOrderbys}}
+			<!-- orderby -->
+			<Require src="Component/SearchForm/{{segment_collected}}/{{entity_collected}}/Orderbys" id="SearchForm_Orderbys"/>
+			<View height="10dp"></View>
+			<Require src="Framework/FormElementSeparator">
+{{/hasOrderbys}}
+			
+			<!-- logic of search constraint -->
+			<View class="SearchElementConfigPanel">
+				<Require src="Framework/SearchFormElementLogic" id="SearchForm_LogicSelector"/>
+			</View>
+			
+			<!-- do search -->
+			<Require src="Framework/SearchFormSubmit" id="SearchForm_Submit">
+			<View height="44dp"></View>
+			
+		</ScrollView>
+	</View>
+</Alloy>

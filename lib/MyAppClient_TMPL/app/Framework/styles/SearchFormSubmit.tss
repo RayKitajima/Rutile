@@ -1,0 +1,16 @@
+
+"#ExecButton" : {
+	top          : "10dp",
+	borderWidth  : "1dp",
+	borderColor  : "#a0a0a0",
+	borderRadius : "4dp",
+	width        : "95%",
+	height       : "44dp",
+	backgroundColor : "#a4d3eb",
+	backgroundSelectedColor : "#80bedf",
+},
+
+".ExecButtonLabel" : {
+	color : "#fff",
+	font  : { fontWeight:'bold' }
+}

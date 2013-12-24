@@ -1,0 +1,42 @@
+
+"#Container" : {
+	width  : Ti.Platform.displayCaps.platformWidth,
+	height : Ti.Platform.displayCaps.platformHeight,
+},
+
+"#Back" : {
+	top             : "0dp",
+	width           : Ti.Platform.displayCaps.platformWidth,
+	height          : Ti.Platform.displayCaps.platformHeight,
+	backgroundColor : "#000",
+	opacity         : 0.50,
+},
+
+"#Grip" : {
+	top    : "0dp",
+	width  : "90%",
+	height : "8dp",
+	layout : "vertical",
+},
+
+"#Header" : {
+	top    : "8dp",
+	width  : "90%",
+	height : "20dp",
+	layout : "horizontal",
+},
+
+"#HeaderSymbol" : {
+	top   : "0dp",
+	left  : "0dp",
+	color : "#fff",
+},
+
+"#HeaderText" : {
+	top   : "0dp",
+	left  : "10dp",
+	color : "#fff",
+	font  : { fontSize:12, fontWeight:"bold" },
+},
+
+

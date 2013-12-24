@@ -1,0 +1,26 @@
+<Alloy>
+	<View id="Container" visible="false">
+		<View id="DialogScreenMask"></View>
+		<View id="DialogBack"></View>
+		<View id="DialogItemContainer">
+			<View id="DescView">
+				<Label id="DescLabel">
+			</View>
+			<View id="NewView" class="DialogItem" onTouchstart="downNewView" onTouchend="upNewView" onClick="clickNew">
+				<Label id="NewSymbol" class="ItemIcon"/>
+				<Label id="NewLabel" text="Titanium.Locale.getString('FrameworkSelectorBranchNewLabel')"/>
+			</View>
+			<View id="SearchView" class="DialogItem" onTouchstart="downSearchView" onTouchend="upSearchView" onClick="clickSearch">
+				<Label id="SearchSymbol" class="ItemIcon"/>
+				<Label id="SearchLabel" text="Titanium.Locale.getString('FrameworkSelectorBranchSearchLabel')"/>
+			</View>
+			<View id="ListView" class="DialogItem" onTouchstart="downListView" onTouchend="upListView" onClick="clickList">
+				<Label id="ListSymbol" class="ItemIcon"/>
+				<Label id="ListLabel" text="Titanium.Locale.getString('FrameworkSelectorBranchListLabel')"/>
+			</View>
+			<View id="CancelView" class="DialogItem" onTouchstart="downCancelView" onTouchend="upCancelView" onClick="clickCancel">
+				<Label id="CancelLabel" text="Titanium.Locale.getString('FrameworkSelectorBranchCancelLabel')"/>
+			</View>
+		</View>
+	</View>
+</Alloy>

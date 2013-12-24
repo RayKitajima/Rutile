@@ -1,0 +1,50 @@
+{
+	"about": {
+		"name": "Rutile",
+		"author": "Rei Kitajima",
+		"copyright": "Copyright (c) 2013 Rei Kitajima <rei.kitajima@gmail.com>",
+		"id": "com.craftclay.rutile"
+	},
+	"name": "rutile",
+	"description": "Factory automation for Mobile Enterprise.",
+	"keywords": [
+		"titanium",
+		"ios",
+		"iphone",
+		"enterprise",
+		"synchronous",
+		"postgresql",
+		"redis",
+		"generator",
+		"MDA"
+	],
+	"version": "0.1.0",
+	"author": {
+		"name": "Rei Kitajima",
+		"email": "rei.kitajima@gmail.com"
+	},
+	"maintainers": [
+		{"name": "Rei Kitajima", "email": "rei.kitajima@gmail.com"}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/RayKitajima/Rutile.git"
+	},
+	"preferGlobal": true,
+	"dependencies": {
+		"mustache": "~0.7.2"
+	},
+	"devDependencies": {
+	},
+	"license": "Apache Public License v2",
+	"bin": {
+		"rutile": "bin/rutile"
+	},
+	"main": "./lib/rutile",
+	"directories": {
+		"lib": "./lib"
+	},
+	"engines": {
+		"node": ">=0.8"
+	}
+}

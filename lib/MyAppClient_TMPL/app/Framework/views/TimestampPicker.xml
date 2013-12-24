@@ -1,0 +1,18 @@
+<Alloy>
+	<View id="Container">
+		<View id="Background"></View>
+		<View id="Wrapper">
+			<View id="PickerContainer">
+				<View id="Bar">
+					<View id="LeftButtonsView"></View>
+					<View id="RightButtonsView"></View>
+				</View>
+				<View id="Body">
+					<!-- horizontally layouted in 2x disp width -->
+					<Picker id="DatePicker" type="Titanium.UI.PICKER_TYPE_DATE"/>
+					<Picker id="TimePicker" type="Titanium.UI.PICKER_TYPE_TIME"/>
+				</View>
+			</View>
+		</View>
+	</View>
+</Alloy>

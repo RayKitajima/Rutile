@@ -1,0 +1,9 @@
+
+".IconView" : {
+	right : "10dp",
+	width : "25dp",
+},
+
+".Icon" : {
+	width : Ti.UI.SIZE,
+}

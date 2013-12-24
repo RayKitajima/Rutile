@@ -1,0 +1,11 @@
+
+".Container" : {
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".Title" : {
+	color  : '#55c',
+	font   : { fontSize:12, fontWeight:'normal' },
+	left   : "10dp",
+},

@@ -1,0 +1,9 @@
+
+"Window" : {
+	navBarHidden: true
+},
+
+".container": {
+	backgroundColor : "#f0f0f0"
+}
+

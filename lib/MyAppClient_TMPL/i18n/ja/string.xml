@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+{{#Segments}}
+<!-- {{name}} -->
+<string name="{{name}}">{{ui_segmentName}}</string>
+{{#Entities}}
+<!-- {{segmentName}}/{{entityName}} -->
+<string name="{{segmentName}}_{{entityName}}">{{ui_entityName}}</string>
+{{#Fields}}
+<string name="{{segmentName}}_{{entityName}}_{{fieldName}}">{{ui_fieldName}}</string>
+{{/Fields}}
+{{/Entities}}
+{{/Segments}}
+
+<!-- Framework:messages -->
+<string name="FrameworkMessageSave">保存</string>
+<string name="FrameworkMessageRemove">削除</string>
+<string name="FrameworkMessageCancel">キャンセル</string>
+<string name="FrameworkMessageRemoveConfirmationText">選択したアイテムを削除しますか？</string>
+<string name="FrameworkMessageNoticeCollectionRemoval">(注意：コレクションテーブルのデータは削除されますが、コレクトされているアイテムは削除されません。)</string>
+<string name="FrameworkMessageSaveConfirmationText">保存しますか？</string>
+<string name="FrameworkTitleEntity">Entityリスト</string>
+<string name="FrameworkTitleFormatEditForm">%s編集</string>
+<string name="FrameworkTitleFormatEditFormReadonly">%s</string>
+<string name="FrameworkTitleFormatEditFormEditable">%s編集</string>
+<string name="FrameworkTitleFormatNewForm">新規%s</string>
+<string name="FrameworkTitleFormatSearchFormView">%s検索</string>
+<string name="FrameworkTitleFormatListView">%sリスト</string>
+<string name="FrameworkTitleFormatPicker">%s選択</string>
+<string name="FrameworkSubTitleFormatListView">%s削除</string>
+<string name="FrameworkIndicatorSavingMessage">保存中・・・</string>
+<string name="FrameworkIndicatorLoadingMessage">読み込み中・・・</string>
+<string name="FrameworkIndicatorSearchingMessage">検索中・・・</string>
+<string name="FrameworkGeolocationUnderReverseGeocoding">住所検索中・・・</string>
+<!-- Framework:EditForm -->
+<string name="FrameworkSelectorBranchDescLabel">%sの選択方法を指定して下さい。</string>
+<string name="FrameworkSelectorBranchNewLabel">新規追加</string>
+<string name="FrameworkSelectorBranchSearchLabel">検索して指定</string>
+<string name="FrameworkSelectorBranchListLabel">リストから選択</string>
+<string name="FrameworkSelectorBranchCancelLabel">キャンセル</string>
+<string name="FrameworkEditFormElementDate">日付</string>
+<string name="FrameworkEditFormElementTime">時刻</string>
+<string name="FrameworkEditFormElementTimestamp">日時</string>
+<!-- Framework:EditForm:ValidateHintText -->
+<string name="FrameworkEditFormValidateAutoFill">自動</string>
+<string name="FrameworkEditFormValidateNotNull">必須</string>
+<string name="FrameworkEditFormValidatePositiveValue">正値</string>
+<string name="FrameworkEditFormValidateNegativeValue">負値</string>
+<string name="FrameworkEditFormValidateTimestampString">時刻</string>
+<string name="FrameworkEditFormValidateDateString">日付</string>
+<string name="FrameworkEditFormValidatePoint">地点</string>
+<string name="FrameworkEditFormValidateArea">領域</string>
+<string name="FrameworkEditFormValidateEmailString">メールアドレス</string>
+<string name="FrameworkEditFormValidateEscapedHtmlTag">HTMLタグはエスケープされます</string>
+<!-- Framework:SearchForm -->
+<string name="FrameworkSearchFormElementKey">完全一致</string>
+<string name="FrameworkSearchFormElementLike">部分一致</string>
+<string name="FrameworkSearchFormElementNum">数値</string>
+<string name="FrameworkSearchFormElementNumMin">最小</string>
+<string name="FrameworkSearchFormElementNumMax">最大</string>
+<string name="FrameworkSearchFormElementDate">日付</string>
+<string name="FrameworkSearchFormElementDateFrom">開始</string>
+<string name="FrameworkSearchFormElementDateTo">終了</string>
+<string name="FrameworkSearchFormElementTimestamp">時刻</string>
+<string name="FrameworkSearchFormElementTimestampFrom">開始</string>
+<string name="FrameworkSearchFormElementTimestampTo">終了</string>
+<string name="FrameworkSearchFormElementNearbyCentroid">中心を選択</string>
+<string name="FrameworkSearchFormElementNearbyDistanceMeter">メートル</string>
+<string name="FrameworkSearchFormElementArea">領域を選択</string>
+<string name="FrameworkSearchFormElementNearbyDistanceMeter">メートル</string>
+<string name="FrameworkSearchFormElementOrderby">ソート</string>
+<string name="FrameworkSearchFormElementSortField">フィールド</string>
+<string name="FrameworkSearchFormElementSortFieldHint">選択する</string>
+<string name="FrameworkSearchFormElementSortMethod">並び順</string>
+<string name="FrameworkSearchFormElementSortMethodHint">選択する</string>
+<string name="FrameworkSearchFormElementSortMethodDesc">降順</string>
+<string name="FrameworkSearchFormElementSortMethodAsc">昇順</string>
+<string name="FrameworkSearchFormElementSearchLogic">検索方法</string>
+<string name="FrameworkSearchFormElementSearchLogicAND">すべて含む</string>
+<string name="FrameworkSearchFormElementSearchLogicOR">いずれかを含む</string>
+<string name="FrameworkSearchFormSearch">検索</string>
+<string name="FrameworkTextExpNumberBetween"> 〜 </string>
+<string name="FrameworkTextExpTimestampBetween"> 〜 </string>
+<string name="FrameworkTextExpNearbyCentroid">中心</string>
+<string name="FrameworkTextExpNearbyDistance">距離</string>
+<string name="FrameworkTextExpArea">エリア</string>
+<string name="FrameworkTextExpSelectionAND">すべて含む</string>
+<string name="FrameworkTextExpSelectionOR">いずれかを含む</string>
+<string name="FrameworkTextExpSearchTypeKey">完全一致</string>
+<string name="FrameworkTextExpSearchTypeLike">部分一致</string>
+<string name="FrameworkTextExpSearchTypeNum">数値</string>
+<string name="FrameworkTextExpSearchTypeDate">日付</string>
+<string name="FrameworkTextExpSearchTypeTimestamp">時刻</string>
+<string name="FrameworkTextExpSearchTypeNearby">近傍</string>
+<string name="FrameworkTextExpSearchTypeNearbyCentroid">%sの周辺</string>
+<string name="FrameworkTextExpSearchTypeNearbyCentroidDistance">%s周辺の%sm</string>
+<string name="FrameworkTextExpSearchTypeArea">領域</string>
+<string name="FrameworkTextExpSearchTypeAreaCentroid">%s周辺</string>
+<string name="FrameworkTextExpSearchTypeAreaCentroidWidth">%s周辺の%sm</string>
+<string name="FrameworkTextExpSelectAll">すべてを選択</string>
+<string name="FrameworkQuerySummaryHeaderText">検索条件</string>
+
+</resources>

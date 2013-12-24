@@ -1,0 +1,5 @@
+<Alloy>
+	<View class="IconView" onClick="clickButton">
+		<Label id="ButtonSymbol" class="Icon"/>
+	</View>
+</Alloy>

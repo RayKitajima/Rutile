@@ -1,0 +1,22 @@
+{
+  "name": "socket.io",
+  "repo": "tipm/socket.io",
+  "version": "0.9.10",
+  "author": "Christian Sullivan <cs@euforic.co>",
+  "origin-author": "Jordi domenech<jordi@iamyellow.net>",
+  "license": "MIT",
+  "description": "Socket.io client",
+  "main": "tipm-socket.io",
+  "keywords": [
+    "socket.io",
+    "websockets",
+    "native module"
+  ],
+  "dependencies": {},
+  "development": {},
+  "guid": "xxxxxxx-xxxxxx-xxxxxx",
+  "minsdk": "2.0.0",
+  "files": [
+    "tipm-socket.io.js","manifest"
+  ]
+}

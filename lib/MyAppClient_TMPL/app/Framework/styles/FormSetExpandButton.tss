@@ -1,0 +1,17 @@
+
+"#ButtonView" : {
+	top    : "0dp",
+	width  : "30dp",
+},
+
+"#OpenButtonSymbol" : {
+	top   : "12dp",
+	left  : "12dp",
+	color : "#88e",
+},
+
+"#CloseButtonSymbol" : {
+	top   : "12dp",
+	left  : "12dp",
+	color : "#88e",
+},

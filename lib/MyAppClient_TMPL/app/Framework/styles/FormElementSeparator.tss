@@ -1,0 +1,13 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : Ti.UI.SIZE,
+	backgroundColor : "#f7f7f7",
+},
+
+".FormElementSeparator" : {
+	borderWidth : 1,
+	borderColor : "#ccc",
+	width       : "95%",
+	height      : 1
+},

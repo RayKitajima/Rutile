@@ -1,0 +1,18 @@
+
+"#RootView" : {
+	backgroundColor : "white",
+	navBarHidden    : false,
+	layout          : "vertical"
+},
+
+".images": {
+	width     : Ti.UI.SIZE,
+	left      : "10dp",
+},
+
+".labels": {
+	width     : Ti.UI.SIZE,
+	left      : "60dp",
+	font      : { fontSize:16, fontWeight:'bold' }
+},
+

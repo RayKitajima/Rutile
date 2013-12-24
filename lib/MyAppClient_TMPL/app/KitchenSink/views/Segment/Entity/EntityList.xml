@@ -1,0 +1,16 @@
+<Alloy>
+	<View id="RootView">
+		<ListView id="SearchResultList" defaultItemTemplate="ListTemplate" onItemclick="onItemClick">
+			<Templates>
+				<ItemTemplate name="ListTemplate" height="44" selectedBackgroundColor="#fff">
+					<View bindId="checkWrapper" class="CheckIconView">
+						<Label bindId="check" id="CheckSymbol" class="CheckIcon"/>
+					</View>
+					<View bindId="labelWrapper" class="LabelWrapper">
+						<Label bindId="label" id="MainLabel" class="Labels"/>
+					</View>
+				</ItemTemplate>
+			</Templates>
+		</ListView>
+	</View>
+</Alloy>

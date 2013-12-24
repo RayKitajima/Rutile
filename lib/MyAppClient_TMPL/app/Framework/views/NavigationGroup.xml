@@ -1,0 +1,18 @@
+<Alloy>
+	<View id="NavigationGroup">
+		<View id="MainMenu">
+			<View id="LeftButtonsView"></View>
+			<View id="RightButtonsView"></View>
+			<View id="BorderLine"></View>
+			<View id="TitleView"></View>
+			<View id="MainMenuMask"/>
+		</View>
+		<View id="SubMenu">
+			<View id="SubLeftButtonsView"></View>
+			<View id="SubRightButtonsView"></View>
+			<View id="SubBorderLine"></View>
+			<View id="SubTitleView"></View>
+			<View id="SubMenuMask"/>
+		</View>
+	</View>
+</Alloy>

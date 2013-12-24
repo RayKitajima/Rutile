@@ -1,0 +1,31 @@
+
+"#RootView" : {
+	backgroundColor : "white",
+	navBarHidden    : false,
+	layout          : "vertical"
+},
+
+"ListView" : {
+},
+
+".LabelWrapper" : {
+	left      : "35dp",
+	width     : Ti.UI.FILL,
+},
+
+".Labels" : {
+	left      : "0dp",
+	width     : Ti.UI.FILL,
+	textAlign : 'left',
+	font      : { fontSize:16, fontWeight:'bold' }
+},
+
+".CheckIconView" : {
+	left  : "0dp",
+	width : "35dp",
+},
+
+".CheckIcon" : {
+	left : "8dp",
+}
+

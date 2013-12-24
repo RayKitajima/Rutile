@@ -1,0 +1,23 @@
+
+".Container" : {
+	top             : "0dp",
+	height          : "44dp",
+	backgroundColor : "#f7f7f7",
+},
+
+".ExtkeyContainer" : {
+	top             : "0dp",
+	left            : "0dp",
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : "#f7f7f7",
+},
+
+".ItemLabel" : {
+	left   : "0dp",
+	width  : "75%",
+ 	height : Ti.UI.FILL,
+	color  : '#55c',
+	font   : { fontSize:12, fontWeight:'normal' },
+},
+

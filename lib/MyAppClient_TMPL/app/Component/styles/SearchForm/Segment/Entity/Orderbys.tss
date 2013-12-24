@@ -1,0 +1,29 @@
+
+".Header" : {
+	top    : "10dp",
+	width  : "95%",
+	height : Ti.UI.SIZE,
+},
+
+".Title" : {
+	left  : "0dp",
+	width : Ti.UI.SIZE,
+	color : "#229",
+},
+
+".SubTitle" : {
+	left  : "5dp",
+	width : Ti.UI.SIZE,
+	color : "#88e",
+},
+
+".Container" : {
+	borderWidth  : "1dp",
+	borderColor  : "#a0a0a0",
+	borderRadius : "4dp",
+	top          : "5dp",
+	width        : "95%",
+	height       : Ti.UI.SIZE,
+	layout       : "horizontal",
+},
+

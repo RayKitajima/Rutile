@@ -1,0 +1,11 @@
+
+"#Container" : {
+	width  : Ti.UI.FILL,
+	height : Ti.UI.SIZE,
+},
+
+"#ElementLabel" : {
+	left  : "0dp",
+	color : "#fff",
+	font  : { fontSize:12, fontWeight:"normal" },
+}

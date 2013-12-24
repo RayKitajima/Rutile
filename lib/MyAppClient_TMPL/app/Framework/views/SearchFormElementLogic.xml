@@ -1,0 +1,11 @@
+<Alloy>
+	<View class="Container">
+		<View id="LogicANDView" onClick="selectAND">
+			<Label id="LogicAND" text="AND" color="#aaa"/>
+		</View>
+		<Label id="LogicSeparator" text=" | " color="#aaa"/>
+		<View id="LogicANDView" onClick="selectOR">
+			<Label id="LogicOR" text="OR" color="#aaa"/>
+		</View>
+	</View>
+</Alloy>
