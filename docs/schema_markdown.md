@@ -1,5 +1,5 @@
 
-# Database difinition
+# Database definition
 
 coming soon...
 
