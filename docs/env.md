@@ -4,8 +4,7 @@
 You can use *brew* for most of installation.
 But here is a guide for scratch.
 
-And it is highly recomended to test in VMware sandobx. [Fusion supports Mavericks as a guest OS](http://kb.vmware.com/kb/2056603).
-And all of the following installation can be done via ssh.
+And it is highly recomended to test in a VMware sandobx. [Fusion supports Mavericks as a guest OS](http://kb.vmware.com/kb/2056603).
 
 ## Node.js/npm
 

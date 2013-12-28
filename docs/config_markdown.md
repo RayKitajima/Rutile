@@ -32,8 +32,8 @@ GeoTools_DefaultLatitudeDelta  : 0.003635423956
 | APP_NAME                              | Application Name                                |
 | SelectAllLimit                        | Num of limit when 'select *'                    |
 | DefaultLanguage                       | ISO639 style language definition                |
-| Map                                   | Predefined locationo for Ti.Map                 |
-| GeoTools_DefaultRegion_longitude      | Default regeion for Ti.Map                      |
+| Map                                   | Predefined location for Ti.Map                  |
+| GeoTools_DefaultRegion_longitude      | Default region for Ti.Map                      |
 | GeoTools_DefaultRegion_latitude       | ditto                                           |
 | GeoTools_DefaultRegion_longitudeDelta | ditto                                           |
 | GeoTools_DefaultRegion_latitudeDelta  | ditto                                           |
@@ -44,10 +44,10 @@ GeoTools_DefaultLatitudeDelta  : 0.003635423956
 
 ## Detail
 
-Each line should be start with keyword defined in the above abstruct.
-Its value shold be defined after **:**, with the exception of shcme file importing by @FILE.
+Each line should be start with keyword defined in the above abstract.
+Its value should be defined after **:**, with the exception of schema file importing by @FILE.
 
-White spece will be allowed in the around of separator **:**.
+White space will be allowed in the around of separator **:**.
 
 Comment will be started with double slash.
 
@@ -60,7 +60,7 @@ Rutile generates components according to this name.
 * Your server package will be generated with suffix Server, like DemoShopServer.
 * Your server-side main package will be generated as this name, like DemoShop.
 * Your toolkit for generating Titanium app will be generated with suffix Tools, like DemoShopTools.
-* Your client component pakcage will be generated with suffix Client, like DemoShopClient.
+* Your client component package will be generated with suffix Client, like DemoShopClient.
 * Your Titanium app will be generated with suffix App, like DemoShopApp.
 
 ### SelectAllLimit
@@ -73,13 +73,13 @@ Add a limit for this function.
 ### DefaultLanguage
 
 ISO639 style language definition.
-Rutile will generate i18n file for your Titanium app accoding to this language.
+Rutile will generate i18n file for your Titanium app according to this language.
 
-Curenntly en(english) and ja(japanese) is supported.
+Currently en(English) and ja(Japanese) is supported.
 
-If you would like to make other language i18n file for yor app, 
+If you would like to make other language i18n file for your app, 
 at first, generate by supported language,
-then copy it and edit for your lnaguage.
+then copy it and edit for your language.
 
 ### Map
 
@@ -91,7 +91,7 @@ Map and GeoTools_DefaultRegion* defines Ti.Map's default region.
 Defined later overrides previous definition.
 
 Predefined location can be used by setting Map value.
-Otherwise, you have to define GeoTools_DefaultRegion*, discribed in the following sections.
+Otherwise, you have to define GeoTools_DefaultRegion*, described in the following sections.
 
 Available predefined location is Tokyo only.
 
