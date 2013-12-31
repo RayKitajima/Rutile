@@ -143,7 +143,7 @@ The entry point of automation is Config.txt.
 Here, you will define a bit of application information.
 
 ```
-APP_NAME : YourAppName
+APP_NAME : DemoShop
 
 SelectAllLimit : 1000
 DefaultLanguage : en
@@ -170,7 +170,7 @@ sequence:productSeq(1000)
 	productID			int4		ProductID		key					notNull			
 	productName(*)		text		Product Name	like,orderby		notNull			
 	price				int2		Price			num,orderby			positiveValue	
-	depositoryID		int			DepositoryID	key					-				helper:Product/Depository
+	depositoryID		int			DepositoryID	key,join			-				helper:Product/Depository
 	registerDate		timestamp	Date			timestamp,orderby	timestampString	
 
 # Depository (Product depository)
@@ -185,7 +185,7 @@ sequence:depositorySeq(1000)
 ```
 
 Database segment should be formatted in Rutile Schema Markdown style.
-It is simple tab sepalated text file, looks like you do in an very early phase of development of business application.
+It is simple tab sepalated text file, looks like you do in very early phase of development for business application.
 
 Detail of format will be found in [docs/schema_markdown.md](https://github.com/RayKitajima/rutile/blob/master/docs/schema_markdown.md).
 

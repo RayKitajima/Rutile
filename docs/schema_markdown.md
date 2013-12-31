@@ -52,7 +52,7 @@ sequence:productImageSeq(1000)
 	caption			text		Caption			like		-				editor:textArea
 ```
 
-## Idiom
+## Term
 
 | word                 | explanation                                                             |
 |:---------------------|:------------------------------------------------------------------------|
