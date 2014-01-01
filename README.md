@@ -189,7 +189,7 @@ It is simple tab sepalated text file, looks like you do in very early phase of d
 
 Detail of format will be found in [docs/schema_markdown.md](https://github.com/RayKitajima/rutile/blob/master/docs/schema_markdown.md).
 
-And supported etity relation and database design pattern will be found in [docs/design_pattern.md](https://github.com/RayKitajima/rutile/blob/master/docs/design_pattern.md).
+And supported etity relation and database design pattern will be found in [docs/specification.md](https://github.com/RayKitajima/rutile/blob/master/docs/specification.md).
 
 When you generate server, SQL files to initialize your database are also generated. 
 Just run this if you need it.
