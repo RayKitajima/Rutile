@@ -322,7 +322,7 @@ object cache |           |     +-----+
 The container provides object cacheing, data persistent and transaction.
 
 Container-object can be available from ContainerFactory defined in your generated package.
-And connection information can be availalbe in the file generaged <APP_NAME>Server/<APP_NAME>Config/<APP_NAME>Config.js.
+And connection information can be availalbe in the file generaged <i>APP_NAME</i>Server/<i>APP_NAME</i>Config/<i>APP_NAME</i>Config.js.
 There is some default information defained, edit it for your env.
 
 You can get container object for each database segment by specifying segment name.
@@ -527,7 +527,7 @@ This is why you have to define unique entity name across all segments.
 
 ### Component overriding (Impl)
 
-Rutile generates symmetric package for your main APP_NAME package named <APP_NAME>Impl under the same directory of it.
+Rutile generates symmetric package for your main APP_NAME package named <i>APP_NAME</i>Impl under the same directory of it.
 
 The package has symmetric directory structure for the main package.
 You can override module by putting override module into the appropriate location and modify Factory being there.
