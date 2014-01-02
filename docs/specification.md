@@ -322,11 +322,11 @@ object cache |           |     +-----+
 The container provides object cacheing, data persistent and transaction.
 
 Container-object can be available from ContainerFactory defined in your generated package.
-And connection information can be availalbe in the file generaged <i>APP_NAME</i>Server/<i>APP_NAME</i>Config/<i>APP_NAME</i>Config.js.
-There is some default information defained, edit it for your env.
+And connection information can be available in the file generated <i>APP_NAME</i>Server/<i>APP_NAME</i>Config/<i>APP_NAME</i>Config.js.
+There is some default information defined, edit it for your env.
 
 You can get container object for each database segment by specifying segment name.
-The other way, you can bind multi-segment or all your segemtns.
+The other way, you can bind multi-segment or all your segments.
 
 ```javascript
 // specific segment
@@ -348,7 +348,7 @@ container.init();
 ```
 
 Transaction can be managed by transaction object made by container.
-If the container bind multiple segments, transaction is also binded.
+If the container bind multiple segments, transaction is also bound.
 
 To start transaction, just call begin method.
 The default is auto-commit mode.
@@ -373,7 +373,7 @@ tx.rollback();
 tx close();
 ```
 
-Object cache is provied by Redis.
+Object cache is provided by Redis.
 It minimizes database access, and and makes instances for the same model for the same id identical in your session,
 but does not provide any transaction.
 
@@ -496,6 +496,40 @@ Both returns true or false.
 | dateString      | true if the value is formatted as date style          |
 | emailString     | true if the value is formatted as email style         |
 | geographyPoint  | true if the value is formatted as PostGIS point style | 
+| helper          | true if the foreign entity exists                     |
+
+If you define helper tag for your field, validation process try to find your foreign object.
+And if the object exists correctly, returns true.
+
+This behaviour seems to make trouble when you saving multiple entities depending each other by foreign key.
+But don't worry.
+Container returns same instance in the same session.
+
+For example, Product/Product has Product/Product.productImageID field, its helper, foreign entity is Product/ProductImage, 
+and both are fresh.
+
+```javascript
+var productID = Product.publishID();
+var productImageID = ProductImage.publishID();
+
+var product = Product.instance(productID);
+var productImage = ProductImage.instance(productImageID);
+
+product.price = 100;
+product.productImageID = productImageID;
+productImage.image = blob.toString();
+
+product.save();
+productImage.save();
+```
+
+The function call product.save() will look up the instance for productImageID in its internal validation phase,
+but the container returns same instance already having your blob string just set above.
+Hence not error.
+
+This is the same thing whenever you call via websocket, while you are using *app* and *batchtag*. 
+
+(Those are described in the section of Client too.)
 
 
 ### Constraint
@@ -555,25 +589,137 @@ function ModelConstructor(){
 
 module.exports = {
 	getClass      : ModelConstructor,                   // override
-	publishID     : ProductImageModel.publishID,        // delegate this function to the parent
-	instance      : ProductImageModel.instantiate,      // delegate this function to the parent
-	search        : ProductImageModel.search,           // delegate this function to the parent
-	ids           : ProductImageModel.ids,              // delegate this function to the parent
-	fieldManifest : ProductImageModel.getFieldManifest, // delegate this function to the parent
+	publishID     : ProductImageModel.publishID,        // delegate to the parent
+	instance      : ProductImageModel.instantiate,      // delegate to the parent
+	search        : ProductImageModel.search,           // delegate to the parent
+	ids           : ProductImageModel.ids,              // delegate to the parent
+	fieldManifest : ProductImageModel.getFieldManifest, // delegate to the parent
 };
 ```
 
 ## Client
 
-[FIG]
+```
+index (list of entities)
+      |
+      |
+	  V
++------------+         +------------+
+|    List    |<------->|  EditForm  | 
++------------+         +------------+
+      ^ 
+      | 
+      v
++------------+
+| SearchForm | 
++------------+
+```
+
+Rutile generates KitchenSink application that is combination of three basic functions, List, EditForm and SearchForm at the end.
+
+The *index* is a list of all your Entities.
+
+Selecting one of them, shows the list of instances, or rows, in the entity.
+And selecting one of them, shows the detail of values the instance having.
+
+The list has a button to bring up SearchForm, having all patterns of your schema definition.
+And also, this list has a function to delete some instances.
+
 
 ### Model
 
+Client side model is a facade object for its data management and UI interaction.
+This is not Alloy's model.
+
+Model also provide SCRUD method.
+Functions *SCRD* are provided as static method.
+The rest *U* is provided as instance method.
+Those methods are bit different to the server side model interface, to simplify callback.
+Yes, data interaction in client side components are implemented as async structure.
+
+The life cycle of data persistent is following.
+
+```javascript
+// S:search
+Model.search({
+	query    : { valid query described in the section of Client Server protocol },
+	batchtag : 'apptag binder',
+	callback : function(){ 'you can get search result here!'; },
+});
+
+// CR:create and read
+Model.instantiate({
+	primaryKeys : [array of ID you want to get instance],
+	expand      : depth of instantiation,
+	batchtag    : 'apptag binder',
+	callback    : function(){ 'you can get instances here!'; }
+});
+
+// U:update
+instance.save({
+	batchtag : 'apptag binder',
+	callback : function(){ 'you can get saved instance here!'; }
+});
+
+// D:delete
+Model.remove({
+	ids      : [array of ID you wan to remove],
+	batchtag : 'apptag binder',
+	callback : function(){ 'you can get removed ids here!'; }
+});
+```
+To modify your entity, you can use usaul method.
+
+```javascript
+instance.field = value;
+```
+
+You see several *batchtag* properties.
+This is a binder to serialize multiple apps.
+
+The app is a small package of application.
+Keyword of batchtag makes a batch to the server call, so that execute those fragments together.
+Bound apps will be executed in the same context, in other word in the same session.
+Those are also executed in the order you called methods with the same batchtag.
+
+For example, in the case, saving a fresh Product instance having foreign key productImageID, and its linked entity ProductImage is also fresh,
+you have to save them with same batchtag.
+
+```javascript
+var dispatch = require('CentralDispatch'); // singleton
+
+productImage.save({
+	batchtag : 'saving product',
+	function : function(){ console.log('image saved'); },
+});
+
+product.save({
+	batchtag : 'saving product',
+	function : function(){ console.log('image saved'); },
+});
+
+dispatch.sync('saving product'); // actual invocation of save
+```
+
+The CentralDispatch is a framework provided by Rutile as a singleton object.
+Calling a save method generates an *app* representing its operation, and push it into the queue of CentralDispatch.
+Therefore your methods call anywhere in your application with same batchtag will be invoked in the same context when the sync was called.
+And those apps are executed in the server by its order you push in.
+
+(Client side model should have sanitizing and validation phase like server side model.
+But not yet implemented.)
+
 ### CentralDispatch
+
+As mentioned above, CentralDispatch is a framework provided in Rutile client.
+
+This module encapsulates application call for the server, and manages series of app by batchtag.
+
+The name is just for fun.
 
 ### NotificationCenter
 
-### KitchenSink made by Componet
+### KitchenSink made by Component
 ### Component made by Framework
 
 ### EditFormGroup

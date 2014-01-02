@@ -25,20 +25,20 @@ Traditional business application like sales management system requires strict tr
 And companies using like these application usually not mind C10K problem.
 So usually, Node.js is not the best solution for such a system.
 
-But, JavaScript is very easy to laen, and Node.js is widely accepted, so its community makes many usable modules.
+But, JavaScript is very easy to learn, and Node.js is widely accepted, so its community makes many usable modules.
 Additionally, Titanium is also very easy to write apps, and is rapidly improving.
 JavaScript is all that needed, while you are in Node.js and Titanium. (And PL/v8 is for DB)
 
 If you can accept synchronous data access in Node.js, and you can select iOS app for your enterprise application,
 large part of application development will be done by Rutile.
 
-Rutile is for small/midium scale Mobile Enterprise, or for ultra rapid prototyping.
+Rutile is for small/medium scale Mobile Enterprise, or for ultra rapid prototyping.
 
 
 ## Architecture
 
 In server side, data persistent layer is built on PostgreSQL or PostGIS, and object cache layer is on Redis.
-Rutile provides traditional contaner based on them.
+Rutile provides traditional container based on them.
 
 ```
 +--------+                 +----------------+
@@ -67,7 +67,7 @@ Client application is built on Alloy MVC framework for Titanium.
 |      Alloy      |
 +-----------------+
 
-* Generated Model is not a Alloy's model
+* Generated Model is not Alloy's model
 ```
 
 
@@ -95,7 +95,7 @@ Rutile itself can be installed by usual practice.
 sudo npm install rutile -g
 ```
 
-## Docmentation
+## Documentation
 
 Tutorial and documentation will be coming soon!
 
@@ -155,7 +155,7 @@ Map : Tokyo
 @Product.txt
 ```
 
-The last line imports database difinition named Product.txt in the same directory of the Config.txt itself.
+The last line imports database definition named Product.txt in the same directory of the Config.txt itself.
 
 Detail of its format will be found in [docs/config_markdown.md](https://github.com/RayKitajima/rutile/blob/master/docs/config_markdown.md).
 
@@ -185,11 +185,11 @@ sequence:depositorySeq(1000)
 ```
 
 Database segment should be formatted in Rutile Schema Markdown style.
-It is simple tab sepalated text file, looks like you do in very early phase of development for business application.
+It is simple tab separated text file, looks like you do in very early phase of development for business application.
 
 Detail of format will be found in [docs/schema_markdown.md](https://github.com/RayKitajima/rutile/blob/master/docs/schema_markdown.md).
 
-And supported etity relation and database design pattern will be found in [docs/specification.md](https://github.com/RayKitajima/rutile/blob/master/docs/specification.md).
+And supported entity relation and database design pattern will be found in [docs/specification.md](https://github.com/RayKitajima/rutile/blob/master/docs/specification.md).
 
 When you generate server, SQL files to initialize your database are also generated. 
 Just run this if you need it.
@@ -224,8 +224,8 @@ tx.commit();
 ```
 
 In the beginning, getting container for your data, and starting transaction.
-Then, getting a product instance, modifing its price, and persisting the product data.
-At the end, commiting transaction.
+Then, getting a product instance, modifying its price, and persisting the product data.
+At the end, committing transaction.
 
 
 ## Gist of client
@@ -277,7 +277,7 @@ exports.viewDidLoad = function(){
 };
 ```
 
-In the controller, initializing form elements when the view did load. (The timming is provied by Rutile framework.)
+In the controller, initializing form elements when the view did load. (The timing is provided by Rutile framework.)
 Those search form is for *like search* of text field named as *depositoryName*, and for *area search* of geolocation field named as *location*.
 When user click *$.SearchForm_Submit*, auto generated listing interface in the KitchenSink directory will be shown.
 
