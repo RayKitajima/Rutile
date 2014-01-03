@@ -102,7 +102,7 @@ var app = { apptag:"Segment/Entity.method", params:{parameters}, serial:1 };
 For example, to get instances of "Product/Product" its productID is 1,2 and 3 will be composed as:
 
 ```javascript
-var app = { apptag:"Product/Product.get", params:[1,2,3], serial:1 };
+var app = { apptag:"Product/Product.get", params:{ ids:[1,2,3] }, serial:1 };
 ```
 
 The last element, serial, is a unique number in the client instance, to determine callback.
@@ -686,7 +686,7 @@ For example, in the case, saving a fresh Product instance having foreign key pro
 you have to save them with same batchtag.
 
 ```javascript
-var dispatch = require('CentralDispatch'); // singleton
+var Dispatch = require('CentralDispatch'); // singleton
 
 productImage.save({
 	batchtag : 'saving product',
@@ -698,7 +698,7 @@ product.save({
 	function : function(){ console.log('image saved'); },
 });
 
-dispatch.sync('saving product'); // actual invocation of save
+Dispatch.sync('saving product'); // actual invocation of save
 ```
 
 The CentralDispatch is a framework provided by Rutile as a singleton object.
@@ -706,31 +706,231 @@ Calling a save method generates an *app* representing its operation, and push it
 Therefore your methods call anywhere in your application with same batchtag will be invoked in the same context when the sync was called.
 And those apps are executed in the server by its order you push in.
 
+(In above sample snippet, the first line is just for demonstration, you dont have to call it before save, but just before Dispatch.sync in the last.)
+
 (Client side model should have sanitizing and validation phase like server side model.
 But not yet implemented.)
+
 
 ### CentralDispatch
 
 As mentioned above, CentralDispatch is a framework provided in Rutile client.
 
-This module encapsulates application call for the server, and manages series of app by batchtag.
+This module encapsulates application call for the server, and manages series of apps by batchtag.
 
-The name is just for fun.
+In Rutile generated UI application, application function is fragmented in small package of app.
+So usually tracking serial number and managing callback makes code unreadable.
+
+CentralDispatch encapsulates these things.
+You can make *app* request object that having only your business logic.
+
+```javascript
+var Dispatch = require('CentralDispatch');
+
+var work1 = function(instances){
+	instances.map(function(instance){ console.log(instance); });
+};
+
+var app1 = {
+	apptag   : "Product/Product.get",
+	params   : { ids:[10,20,30] },
+	callback : work1
+};
+
+Dispatch.sync(app1);
+```
+
+The sync method of CentralDispatch immediately execute your app.
+
+```javascript
+var tag = 'my series of work';
+
+var work2 = function(instances){
+	instances.map(function(instance){ console.log(instance); });
+};
+
+var app2 = {
+	apptag   : "Product/TopSales.get",
+	params   : { ids:[1,2,3] },
+	callback : work2
+};
+
+Dispatch.push(tag,app1);
+Dispatch.push(tag,app2);
+Dispatch.sync(tag);
+```
+
+On the other hand, push method with tag stacks your works in its queue, 
+then executed them when the sync method was called.
+
+This is useful if some works have dependencies.
+Bound apps will be executed in the same context, iOW same session, in the sever.
+This is indispensable function like saving entity having fresh foreign entity.
+
+In client side, stacked callback will be also executed in the order you push.
+But this does not guarantee that those callbacks are serialized.
+Callbacks follow standard JavaScript manner.
+
+If your callbacks depend on each other in your data oriented application,
+it is a sign that you can get more better schema and UI design.
+
+FYI, the implementation of CentralDispatch that calls back is following.
+
+```javascript
+socket.once(response_event,function(context){
+	var responses = context.response;
+	for( var i=0; i<responses.length; i++ ){
+		var response = responses[i];
+		var apptag = response.apptag;
+		var result = response.result;
+		var serial = response.serial
+		var callback = callbacks[serial];
+		callback(result);
+		delete callbacks[serial];
+	}
+});
+```
+
+BTW, the name CentralDispatch is just for fun ;)
+
 
 ### NotificationCenter
 
+NotificationCenter is an event propagation module provided by Rutile client framework.
+
+You know this kind of module everywhere in complex JavaScript UI application.
+
+NotificationCenter has usual methods notify, listen/once, and remove like following.
+
+```javascript
+var Notifier = require('NotificationCenter');
+
+Notifier.notify(EVENT_NAME,object);
+
+Notifier.listen(EVENT_NAME,callback);
+Notifier.once(EVENT_NAME,callback);
+
+Notifier.remove(EVENT_NAME);
+```
+
+If you forget to remove your registration for NotificationCenter, your callback will leak.
+
+
 ### KitchenSink made by Component
+
+
 ### Component made by Framework
+
+#### EditForm
+
+| type           | Base Framework module     | note                                     |
+|:---------------|:--------------------------|:-----------------------------------------|
+| primary key    | EditFormElementPrimaryKey | if the key is primary key                |
+| int,int2,int4  | EditFormElementInt        |                                          |
+| text           | EditFormElementTextArea   | if having tag editor:textArea            |
+| text           | EditFormElementTextField  | if having tag editor:textField (default) |
+| date           | EditFormElementDate       |                                          |
+| timestamp      | EditFormElementTimestamp  |                                          |
+| image          | EditFormElementImage      |                                          |
+| geography      | EditFormElementLocation   |                                          |
+| extkey         | EditFormElementExtkey     | if having tag helper:ENTITY              |
+| extentity      | EditFormElementExtentity  | if this is a collection item             |
+
+...
+
+#### SearchForm
+
+| type           | Base Framework module      |
+|:---------------|:---------------------------|
+| key            | SearchFormElementKey       |
+| like           | SearchFormElementLike      |
+| num            | SearchFormElementNum       |
+| date           | SearchFormElementDate      |
+| timestamp      | SearchFormElementTimestamp |
+| nearby         | SearchFormElementNearby    |
+| area           | SearchFormElementArea      |
+
+...
 
 ### EditFormGroup
 ### SearchFormGroup
 
 ### List(Reusable)
+
+```
++----------------------+     +----------------------+
+| <  EntityList (S)(+) |     | <  EntityList (S)(+) |
++----------------------|     +----------------------|
+| □ instance         > |     | instance           > |
+| -------------------- |     | -------------------- |
+| □ instance         > |     | instance           > |
+| -------------------- |     | -------------------- |
+| □ instance         > |     | instance           > |
+| -------------------- |     | -------------------- |
+| □ instance         > |     | instance           > |
+| -------------------- |     | -------------------- |
+| □ instance         > |     | instance           > |
+| +------------------+ |     | -------------------- |
+| | Query            | |     | instance           > |
+| |    details...    | |     | -------------------- |
++----------------------+     +----------------------+
+
+* with gadget                * simple reusable
+```
+
+...
+
 ### Editor(Reusable)
+
+```
++----------------------+     +----------------------+
+| <     Editor     (E) | ==> | X      Editor      V |
++----------------------|     +----------------------|
+| Entity               |     | Entity               |
+| +------------------+ |     | +------------------+ |
+| |FLD : value       | |     | |FLD : value       | |
+| +------------------+ |     | +------------------+ |
+| |FLD : value       | |     | |FLD : value       | |
+| +------------------+ |     | +------------------+ |
+| |FLD : value       | |     | |FLD : value       | |
+| +------------------+ |     | +------------------+ |
+| Collection           |     | Collection           |
+| +------------------+ |     | +------------------+ |
+| |Collected         | |     | |Collected         | |
+| +------------------+ |     | +------------------+ |
++----------------------+     +----------------------+
+
+* click (E) to editable mode
+* reusable version has same visual, but different internal
+```
+
+...
+
 ### SearchForm(Reusable)
 
+```
++----------------------+     +----------------------+
+| X    SearchForm      | ==> | <  ResultList (S)(+) |
++----------------------|     +----------------------|
+| Field(type)          |     | instance           > |
+| AND|OR           (+) |     | -------------------- |
+| +------------------+ |     | instance           > |
+| | value            | |     | -------------------- |
+| +------------------+ |     | instance           > |
+| Field(type)          |     | -------------------- |
+| AND|OR           (+) |     | instance           > |
+| +------------------+ |     | -------------------- |
+| | from ~ to        | |     | instance           > |
+| +------------------+ |     | -------------------- |
+|                      |     | instance           > |
+|       [Search]       |     | -------------------- |
++----------------------+     +----------------------+
 
+* [Search] to show List
+* reusable version has same visual, but different internal
+```
 
+...
 
 
 
