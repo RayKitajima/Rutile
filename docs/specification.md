@@ -816,10 +816,121 @@ Notifier.remove(EVENT_NAME);
 If you forget to remove your registration for NotificationCenter, your callback will leak.
 
 
-### KitchenSink made by Component
+### Navigation
+
+Rutile provides generic navigation controller like in iOS objective-c system, just named as NavigationGroup.
+
+To use this navigation system, you have to add it to your index.xml at first.
+
+```xml
+<Alloy>
+	<Window>
+		<Require src="Framework/NavigationGroup" id="NavigationGroup"/>
+	</Window>
+</Alloy>
+```
+
+And in the controller of this view, the index.js, load your first Alloy controller.
+Then open it.
+
+```javascript
+var navi = $.NavigationGroup;
+navi.setRootWindow($.index);
+navi.enableBackButton();
+
+var entityList = Alloy.createController("/KitchenSink/EntityList");
+navi.open(entityList);
+```
+
+This is the part of actual code to be generated for your schema.
+
+Controllers you opened by this protocol can enjoy the benefit of several iOS like method callbacked 
+at the timing of view life cycle.
+
+```javascript
+exports.viewDidLoad = function(){
+	navi = Alloy.Globals.navigationControllerStack[0];
+	updateView();
+};
+
+exports.viewWillAppear = function(){
+	var rootWin = navi.getRootWindow();
+	rootWin.add(infoPanel.getView());
+	infoPanel.restorePosition();
+};
+
+exports.viewWillDisappear = function(){
+	var rootWin = navi.getRootWindow();
+	rootWin.remove(infoPanel.getView());
+	infoPanel.resumePosition();
+};
+```
+
+Method *viewDidLoad* will be called at the view has been loaded by NavigationGroup.
+In this phase, getting the navigation instance is a recommended way to manage your navigation.
+And also, you have to setup your controller's view component here.
+
+The component in you view will be loaded at the timing of the controller is instantiated by Alloy framework.
+Method viewDidLoad is the almost same timing as this.
+
+Method *viewWillAppear* will be called at the view will be actually shown in the view rect of your application.
+This is useful to activate functions that should be stopped while the view is not shown for user.
+
+Last method *viewWillDisappear* will be called at the timing the view will be actually invisible from your view rect. 
+In the opposite direction of viewWillAppear, this method is useful for the the functions that should be inactivated while the view is not visible.
+
+NavigationGroup provides several utility for your view, here is abstruct.
+
+| method            | arguments                     | description                               |
+|:------------------|:------------------------------|-------------------------------------------|
+| showSubMenu       |                               | navbar can have main and sub,             |
+| hideSubMenu       |                               | you can change between them by show/hide  |
+| setTitleView      | Ti.UI.View                    | title view for main navbar                |
+| setSubTitleView   | Ti.UI.View                    | for sub navbar                            |
+| addLeftButton     | kind of Framework/Navi*Button | buttons in left side of main navbar       |
+| setLeftButton     | kind of Framework/Navi*Button | ditto                                     |
+| addSubLeftButton  | kind of Framework/Navi*Button | buttons in left side of sub navbar        |
+| setSubLeftButton  | kind of Framework/Navi*Button | ditto                                     |
+| addRightButton    | kind of Framework/Navi*Button | buttons in right side of main navbar      |
+| setRightButton    | kind of Framework/Navi*Button | ditto                                     |
+| addSubRightButton | kind of Framework/Navi*Button | buttons in right side of sub navbar       |
+| setSubRightButton | kind of Framework/Navi*Button | ditto                                     |
+| setRootWindow     | Ti.UI.View                    | root window, all controller shown on this |
+| getRootWindow     |                               | get root the window object                |
+| enableBackButton  |                               | automatically show back button            |
+| back              |                               | do back                                   |
+| close             |                               | close current controller                  |
+| open              | instance of Alloy controller  | open new controller                       |
+
+Additionally, you can use ModalWindow to open new controller under the model.
+This modal method creates new NavigtionGroup.
+And push it to the Alloy.Global.navigationStack.
+When the modal been closed, remove self from the stack.
+
+For more detail, see Framework/NavigationGroup.js and Framework/ModalWindow.js in your generated client package, 
+and your generated product itself.
 
 
 ### Component made by Framework
+
+The final output of Rutile is a KitchenSink TiApp that covers all of possibility comes from your schema design.
+
+As described in the ReadMe.md, generated application has following component stack:
+
+```
++-----------------+
+|   KitchenSink   | Generated App covering all Components
++-----------------+
+| Component/Model | Generated UI components and Models
++-----------------+
+|    Framework    | Rutile client framework
++-----------------+
+|      Alloy      |
++-----------------+
+```
+
+Rutile client framework provides basic UI component to show, edit and search your data.
+
 
 #### EditForm
 
@@ -855,7 +966,9 @@ If you forget to remove your registration for NotificationCenter, your callback 
 ### EditFormGroup
 ### SearchFormGroup
 
-### List(Reusable)
+### KitchenSink made by Component
+
+#### List(Reusable)
 
 ```
 +----------------------+     +----------------------+
@@ -880,7 +993,7 @@ If you forget to remove your registration for NotificationCenter, your callback 
 
 ...
 
-### Editor(Reusable)
+#### Editor(Reusable)
 
 ```
 +----------------------+     +----------------------+
@@ -906,7 +1019,7 @@ If you forget to remove your registration for NotificationCenter, your callback 
 
 ...
 
-### SearchForm(Reusable)
+#### SearchForm(Reusable)
 
 ```
 +----------------------+     +----------------------+
