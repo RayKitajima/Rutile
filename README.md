@@ -97,9 +97,7 @@ sudo npm install rutile -g
 
 ## Documentation
 
-Tutorial and documentation will be coming soon!
-
-But you can try and look inside the automation by using sample configuration.
+You can try and look inside the automation by using sample configuration.
 
 ```
 git clone https://github.com/RayKitajima/rutile_kickstart.git
@@ -108,6 +106,13 @@ git clone https://github.com/RayKitajima/rutile_kickstart.git
 The *1st_step* example is very simple structure.
 And others are more complex.
 See also [rutile_kickstart/README.md](https://github.com/RayKitajima/rutile_kickstart/blob/master/README.md).
+
+Here is brief overview for using Rutile.
+
+* [How to set up Rutile runnable environment in Mavericks](https://github.com/RayKitajima/Rutile/blob/master/docs/env.md)
+* [Config Markdown](https://github.com/RayKitajima/Rutile/blob/master/docs/config_markdown.md)
+* [Schema Markdown](https://github.com/RayKitajima/Rutile/blob/master/docs/schema_markdown.md)
+* [Specification](https://github.com/RayKitajima/Rutile/blob/master/docs/specification.md)
 
 
 ## Gist of generate
