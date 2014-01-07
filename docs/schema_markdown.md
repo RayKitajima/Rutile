@@ -254,7 +254,7 @@ The line starting * represent the start of collection definition.
 After the line, also should be appear lines starting TAB.
 
 Collection should have two field style definitions, collector and collected.
-It means the former owns the later.
+It means the former owns the latter.
 Both lines should be a primary key expression represented by Segment/Entity.primaryKey.
 
 
