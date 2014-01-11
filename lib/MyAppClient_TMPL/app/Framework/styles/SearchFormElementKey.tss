@@ -14,6 +14,8 @@
 	borderWidth             : 0,
 	backgroundColor         : '#f7f7f7',
 	selectedBackgroundColor : '#f7f7f7',
+	keyboardType            : Ti.UI.KEYBOARD_DEFAULT,
+    returnKeyType           : Ti.UI.RETURNKEY_DONE,
 	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
 }
 

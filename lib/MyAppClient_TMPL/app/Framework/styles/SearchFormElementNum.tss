@@ -22,7 +22,8 @@
 	borderWidth             : 0,
 	backgroundColor         : '#f7f7f7',
 	selectedBackgroundColor : '#f7f7f7',
-	keyboardType            : Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+	keyboardType            : Ti.UI.KEYBOARD_DECIMAL_PAD,
+	returnKeyType           : Ti.UI.RETURNKEY_DONE,
 	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
 },
 
@@ -39,7 +40,8 @@
 	borderWidth             : 0,
 	backgroundColor         : '#f7f7f7',
 	selectedBackgroundColor : '#f7f7f7',
-	keyboardType            : Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
+	keyboardType            : Ti.UI.KEYBOARD_DECIMAL_PAD,
+	returnKeyType           : Ti.UI.RETURNKEY_DONE,
 	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
 }
 

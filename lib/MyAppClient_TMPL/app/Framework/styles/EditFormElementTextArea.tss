@@ -18,7 +18,7 @@
 	backgroundColor         : '#f7f7f7',
 	selectedBackgroundColor : '#f7f7f7',
 	keyboardType            : Ti.UI.KEYBOARD_DEFAULT,
-    returnKeyType           : Titanium.UI.RETURNKEY_CLOSE,
+	returnKeyType           : Ti.UI.RETURNKEY_DEFAULT,
     suppressReturn          : false,
 	textAlign               : Ti.UI.TEXT_ALIGNMENT_LEFT,
 	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
