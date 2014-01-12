@@ -258,17 +258,17 @@ Components in Alloy *src* are auto generated one.
 ```javascript
 var SearchFormGroup = require('SearchFormGroup'); // provided by Rutile framework
 
-var formGroup = SearchFormGroup.makeGroup({
+var group = SearchFormGroup.makeGroup({
 	'name'    : "Product/Depository",
 	'segment' : "Product",
 	'entity'  : "Depository",
 });
-formGroup.addElements({
-	'depositoryName(like)' : $.DepositoryNameLike,
-	'location(nearby)'     : $.LocationArea,
-});
-formGroup.setOrderbys($.SearchForm_Orderbys);
-formGroup.setSubmitAction({
+group.addElements([
+	$.DepositoryNameLike,
+	$.LocationArea
+]);
+group.setOrderbys($.SearchForm_Orderbys);
+group.setSubmitAction({
 	form    : $.SearchForm_Submit,
 	handler : function(){
 		var controller = Alloy.createController('KitchenSink/Product/Product/Depository/List');
