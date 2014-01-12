@@ -265,10 +265,16 @@ If the bulk flag is false, you can save individual field value.
 If it is true, you are required to save entire fields. And if missing some field, server logic will fail.
 Even if the flag is true, you have to define its primary key with using register method.
 
-The result app object includes all saved instance.
+The result app object includes all requested IDs.
+If there is an error in saving the ID, you can find some error info in *exception* property.
 
 ```javascript
-var instances = context['response,1'][i].result;
+var app = context['response,1'][i];
+
+var id = app.result[j].target;
+if( app.result[j].exception ){
+	console.log(id+"not saved");
+}
 ```
 
 Above described description is same for the Collection.
