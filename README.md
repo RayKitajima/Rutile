@@ -73,19 +73,15 @@ Client application is built on Alloy MVC framework for Titanium.
 
 ## Prerequisites and installation
 
-- [Node.js 0.8.x](http://nodejs.org/dist/)
-
-- [PostgreSQL](http://www.postgresql.org) or [PostGIS](http://postgis.net)
-- [pg-sync](https://github.com/RayKitajima/pg-sync) synchronous postgresql binding for node.js.
-
-- [redis](http://redis.io)
-- [hiredis C library](https://github.com/redis/hiredis)
-- [hiredis-simple](https://github.com/RayKitajima/hiredis-simple) synchronous redis binding for node.js.
-
-- bleeding edge of [Titanium SDK](http://builds.appcelerator.com.s3.amazonaws.com/index.html#master) and [Titanium CLI](https://github.com/appcelerator/titanium)
-- bleeding edge of [Alloy](https://github.com/appcelerator/alloy)
-
-- [XCode5](https://developer.apple.com/xcode/index.php)
+* [Node.js 0.8, 0.10, 0.11+](http://nodejs.org/dist/)
+* [PostgreSQL](http://www.postgresql.org) or [PostGIS](http://postgis.net)
+* [pg-sync](https://github.com/RayKitajima/pg-sync) synchronous postgresql binding for node.js.
+* [redis](http://redis.io)
+* [hiredis C library](https://github.com/redis/hiredis)
+* [hiredis-simple](https://github.com/RayKitajima/hiredis-simple) synchronous redis binding for node.js.
+* bleeding edge of [Titanium SDK](http://builds.appcelerator.com.s3.amazonaws.com/index.html#master) and [Titanium CLI](https://github.com/appcelerator/titanium)
+* bleeding edge of [Alloy](https://github.com/appcelerator/alloy)
+* [XCode5](https://developer.apple.com/xcode/index.php)
 
 Quick guide to setup your Mavericks is available in [docs/env.md](https://github.com/RayKitajima/rutile/blob/master/docs/env.md).
 
