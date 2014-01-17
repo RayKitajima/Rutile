@@ -93,7 +93,7 @@ Defined later overrides previous definition.
 Predefined location can be used by setting Map value.
 Otherwise, you have to define GeoTools_DefaultRegion*, described in the following sections.
 
-Available predefined location is Tokyo only.
+Available predefined location is London, Warsaw, NewYork and Tokyo.
 
 ### GeoTools
 
