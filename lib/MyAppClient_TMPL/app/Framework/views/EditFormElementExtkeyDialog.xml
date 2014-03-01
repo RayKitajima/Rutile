@@ -4,7 +4,7 @@
 		<View id="DialogBack"></View>
 		<View id="DialogItemContainer">
 			<View id="DescView">
-				<Label id="DescLabel">
+				<Label id="DescLabel"/>
 			</View>
 			<View id="NewView" class="DialogItem" onTouchstart="downNewView" onTouchend="upNewView" onClick="clickNew">
 				<Label id="NewSymbol" class="ItemIcon"/>

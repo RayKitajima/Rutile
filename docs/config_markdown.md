@@ -129,5 +129,16 @@ Importing schema definition file.
 
 Its format is defined in [docs/schema_markdown.md](https://github.com/RayKitajima/Rutile/blob/master/docs/schema_markdown.md).
 
+### Authentication
+
+#### AuthPassword
+
+Automatically implemnent password base user authentication logic.
+Define id and password field to be used, like SEGMENT/ENTITY.ID_FIELD,PASS_FIELD.
+
+#### TokenLifetime
+
+Define JSON Web Token lifetime as second.
+This will be evaluated ad JavaScript in config compiler. So you can define mathmatical expression, like 60*60*24.
 
 

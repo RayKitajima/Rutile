@@ -41,7 +41,8 @@ In server side, data persistent layer is built on PostgreSQL or PostGIS, and obj
 Rutile provides traditional container based on them.
 
 ```
-+--------+                 +----------------+
+               [JWT]
++--------+       :         +----------------+
 | Ti App |---(WebSocket)---| Node.js Server |....[ Logic ]
 +--------+                 +-------+--------+
                                    |

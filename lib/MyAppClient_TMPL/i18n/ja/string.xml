@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
+<string name="CLIENT_NAME">{{CLIENT_NAME}}</string>
+
 {{#Segments}}
 <!-- {{name}} -->
 <string name="{{name}}">{{ui_segmentName}}</string>
@@ -100,5 +102,15 @@
 <string name="FrameworkTextExpSearchTypeAreaCentroidWidth">%s周辺の%sm</string>
 <string name="FrameworkTextExpSelectAll">すべてを選択</string>
 <string name="FrameworkQuerySummaryHeaderText">検索条件</string>
+<!-- Framework:Auth -->
+<string name="FrameworkTextAuthPasswordId">ログイン名</string>
+<string name="FrameworkTextAuthPasswordPass">パスワード</string>
+<string name="FrameworkTextAuthPasswordTitle">ログイン</string>
+<string name="FrameworkAuthPasswordAuthBtnLabel">ログイン</string>
+<string name="FrameworkMessageAuthorizationFailed">認証失敗</string>
+<string name="FrameworkMessageAuthorizationFailedMessage">認証に失敗しました。IDとパスワードを確認して再度ログインして下さい。</string>
+<string name="FrameworkMessageClose">とじる</string>
+<string name="FrameworkMessageAuthenticationFailed">認証失敗</string>
+<string name="FrameworkMessageAuthenticationFailedMessage">認証情報を確認できませんでした。再度ログインして下さい。</string>
 
 </resources>

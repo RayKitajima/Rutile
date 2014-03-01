@@ -3,7 +3,7 @@
 		<View layout="horizontal" width="Ti.UI.SIZE" height="Ti.UI.SIZE">
 			<Label id="ExecButtonSymbol" class="ExecButtonLabel"/>
 			<View width="10dp"></View>
-			<Label text="Ti.Locale.getString('FrameworkSearchFormSearch')" class="ExecButtonLabel">
+			<Label text="Ti.Locale.getString('FrameworkSearchFormSearch')" class="ExecButtonLabel"/>
 		</View>
 	</View>
 </Alloy>

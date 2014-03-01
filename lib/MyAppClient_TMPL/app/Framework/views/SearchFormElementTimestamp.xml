@@ -4,11 +4,11 @@
 			<View id="ContainerFrom" onClick="openTimestampPickerFrom">
 				<Label id="TimestampFrom"/>
 			</View>
-			<Label id="Between" text="Ti.Locale.getString('FrameworkTextExpTimestampBetween')">
+			<Label id="Between" text="Ti.Locale.getString('FrameworkTextExpTimestampBetween')"/>
 			<View id="ContainerTo" onClick="openTimestampPickerTo">
 				<Label id="TimestampTo"/>
 			</View>
 		</View>
-		<Require src="Framework/FieldClearButton" id="ClearButton">
+		<Require src="Framework/FieldClearButton" id="ClearButton"/>
 	</View>
 </Alloy>

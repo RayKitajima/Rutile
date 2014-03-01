@@ -226,6 +226,15 @@ sudo npm install hiredis-simple -g
 sudo npm install pg-sync -g
 ```
 
+## etc npm packages
+
+If you want to use automatical implementation of authentication logic.
+
+```
+sudo npm install unixtime -g
+sudo npm install node-jws -g
+```
+
 ## socket.io
 
 ```

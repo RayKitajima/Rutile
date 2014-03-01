@@ -3,7 +3,7 @@
 		<View id="Container" class="ExtkeyContainer" onClick="openExtentity">
 			<!-- you should add ExtentityElements here representing external entity -->
 		</View>
-		<Require src="Framework/FieldClearButton" id="ClearButton">
+		<Require src="Framework/FieldClearButton" id="ClearButton"/>
 	</View>
 </Alloy>
 

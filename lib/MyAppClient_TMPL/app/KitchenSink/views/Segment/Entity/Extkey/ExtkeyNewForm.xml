@@ -10,14 +10,14 @@
 				<View class="SectionItem">
 					<Require src="Component/EditForm/{{segment_joined}}/{{entity_joined}}/{{#Uc_first}}{{primary_key_joined}}{{/Uc_first}}" id="{{segment_joined}}_{{entity_joined}}_{{primary_key_joined}}_EditForm"/> <!-- read only -->
 				</View>
-				<Require src="Framework/FormElementSeparator">
+				<Require src="Framework/FormElementSeparator"/>
 				
 {{#Fields_joined}}
 				<!-- {{segment_joined}}/{{entity_joined}}.{{fieldName}} -->
 				<View class="SectionItem">
 					<Require src="Component/EditForm/{{segment_joined}}/{{entity_joined}}/{{#Uc_first}}{{fieldName}}{{/Uc_first}}" id="{{segment_joined}}_{{entity_joined}}_{{fieldName}}_EditForm"/>
 				</View>
-				<Require src="Framework/FormElementSeparator">
+				<Require src="Framework/FormElementSeparator"/>
 				
 {{/Fields_joined}}
 				

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
 
+<string name="CLIENT_NAME">{{CLIENT_NAME}}</string>
+
 {{#Segments}}
 <!-- {{name}} -->
 <string name="{{name}}">{{ui_segmentName}}</string>
@@ -99,5 +101,15 @@
 <string name="FrameworkTextExpSearchTypeAreaCentroidWidth">Around %s (%sm)</string>
 <string name="FrameworkTextExpSelectAll">Select all</string>
 <string name="FrameworkQuerySummaryHeaderText">Summary of search query</string>
+<!-- Framework:Auth -->
+<string name="FrameworkTextAuthPasswordId">Login name</string>
+<string name="FrameworkTextAuthPasswordPass">Password</string>
+<string name="FrameworkTextAuthPasswordTitle">Sign in</string>
+<string name="FrameworkAuthPasswordAuthBtnLabel">Sign in</string>
+<string name="FrameworkMessageAuthorizationFailed">Authorization Failed</string>
+<string name="FrameworkMessageAuthorizationFailedMessage">Authorization failed. Please check your id and pass, then try authorize again.</string>
+<string name="FrameworkMessageClose">OK</string>
+<string name="FrameworkMessageAuthenticationFailed">Authentication Failed</string>
+<string name="FrameworkMessageAuthenticationFailedMessage">Authentication failed. Please go back to authorize.</string>
 
 </resources>

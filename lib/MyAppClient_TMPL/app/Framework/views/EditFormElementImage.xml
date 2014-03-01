@@ -3,6 +3,6 @@
 		<View class="ImageContainer" onClick="openImagePicker">
 			<ImageView id="SelectedImage"/>
 		</View>
-		<Require src="Framework/FieldClearButton" id="ClearButton">
+		<Require src="Framework/FieldClearButton" id="ClearButton"/>
 	</View>
 </Alloy>

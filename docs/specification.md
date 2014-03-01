@@ -83,7 +83,7 @@ All of business entities might be defined by this kind of design pattern.
 +--------+                       +--------+
 ```
 
-To use generated server function, client have to connect to the server with WebSocket,
+To use generated server function, client have to connect to the server with WebSocket over ssl,
 and request a small object encapsulating application message.
 This is named as *app*.
 
@@ -590,9 +590,10 @@ This is why you have to define unique entity name across all segments.
 ### Component overriding (Impl)
 
 Rutile generates symmetric package for your main APP_NAME package named <i>APP_NAME</i>Impl under the same directory of the former.
-
 The package has symmetric directory structure for the main package.
-You can override module by putting override module into the appropriate location and modify Factory being there.
+
+Automatical implementation such as authentication and permission management will be generated as override module in there.
+And also, you can override modules by putting your modules into the appropriate location and modify Factory being there.
 
 For example, following module overrides ProductImage model definition of DemoShop schema.
 
@@ -1246,5 +1247,78 @@ The different between those two version is action for the submit.
 SearchForm for the main path returns back to the List page with gadget, and the rest is notify for its listener.
 
 SearchForm will be also generated as KitchenSink/Segment/Entity/SearchForm.js, and reusable version is as SearchFormReusable.js.
+
+
+
+## Auto Implementation
+
+The above auto generated client/server framework and application based on them are very core of application structure.
+That implements minimum implementation.
+
+Rutile can generate several auto implementation for your more practical application.
+
+### Authentication and Authorization
+
+With defining AuthPassword keyword in your config file, 
+Rutile automatically implements authentication and authorization logic.
+
+The authorization is implemented as a normal logic that can be requested as an app.
+For example, if you select id and password auth logic, app will be described as:
+
+```
+var app = { apptag:'AuthPassword.authorize', params:{ id:ID, pass:PASS }, callback:authenticated };
+```
+
+If succeeded to authorize, the callback will be called.
+The callback never called if the request was failed.
+In this case, client application have to catch the exception message notified by NotificationCenter.
+
+```
+var Notifier = require('NotificationCenter');
+
+Notifier.listen('Error.AuthPassword.authorize',function(Error){
+	// authorize failed
+});
+Notifier.listen('Error.AuthPassword.authenticate',function(Error){
+	// authentication error
+});
+```
+
+Authentication of app will be implemented as override components in the [implementation package](#component-overriding-impl).
+
+```
+var Auth = require('../AuthPassword');
+
+var auth_required_search = function(context,app){
+	var authenticate = Auth.getMethod('authenticate');
+	if( !authenticate(context) ){
+		return; // message will be sent with context.Error.AuthPassword.authenticate
+	}
+	var method = ProductImageLogic.getMethod('search');
+	method(context,app);
+};
+```
+
+If your authorization request was successfully accepted by the server,
+it returns a JSON Web Token signed by certificate defined in <APP_NAME>Config package.
+
+After getting token, client sends apps request with the token in context object,
+then server checks the token to authenticate apps like above logic implementation.
+
+Certificate file to sign the token will be automatically generated in the <APP_NAME>Config directory.
+This is just for test purpose. You should put your development or production certificate file in there.
+
+### Permission management
+
+coming soon.
+
+### Image thumbnail service
+
+coming soon.
+
+### Graph for timeline data
+
+coming soon.
+
 
 

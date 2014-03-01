@@ -6,7 +6,9 @@
 	"dependencies" : {
 		"pg-sync":"0.0.1",
 		"hiredis-simple":"0.0.1",
-		"socket.io":"0.9.0"
+		"socket.io":"0.9.0",
+		"jws":"0.2.5",
+		"unixtime":"0.0.1"
 	},
 	"engines" : { "node": ">= 0.8.0" }
 }

@@ -3,6 +3,6 @@
 		<View class="DateContainer" onClick="openDatePicker">
 			<Label id="FormElementDate"/>
 		</View>
-		<Require src="Framework/FieldClearButton" id="ClearButton">
+		<Require src="Framework/FieldClearButton" id="ClearButton"/>
 	</View>
 </Alloy>

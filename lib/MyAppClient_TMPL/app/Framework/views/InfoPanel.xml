@@ -7,6 +7,6 @@
 			<Label id="HeaderSymbol"/>
 			<Label id="HeaderText"/>
 		</View>
-		<Require src="Framework/InfoContainer" id="InfoContainer"><!-- ScrollableView -->
+		<Require src="Framework/InfoContainer" id="InfoContainer"/><!-- ScrollableView -->
 	</View>
 </Alloy>

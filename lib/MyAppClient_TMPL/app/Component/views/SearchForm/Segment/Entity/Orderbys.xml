@@ -5,7 +5,7 @@
 	</View>
 	<View id="Elements" class="Container">
 		<Require src="Framework/SearchFormElementSortField" id="SearchForm_SortFieldSelector"/>
-		<Require src="Framework/FormElementSeparator">
+		<Require src="Framework/FormElementSeparator"/>
 		<Require src="Framework/SearchFormElementSortMethod" id="SearchForm_SortMethodSelector"/>
 	</View>
 </Alloy>

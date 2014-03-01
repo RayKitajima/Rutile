@@ -12,14 +12,14 @@
 				<View class="SectionItem">
 					<Require src="Component/EditForm/{{segment}}/{{entity}}/{{#Uc_first}}{{primary_key}}{{/Uc_first}}" id="{{segment}}_{{entity}}_{{primary_key}}_EditForm"/> <!-- read only -->
 				</View>
-				<Require src="Framework/FormElementSeparator">
+				<Require src="Framework/FormElementSeparator"/>
 				
 {{#Fields}}
 				<!-- {{segment}}/{{entity}}.{{fieldName}} -->
 				<View class="SectionItem">
 					<Require src="Component/EditForm/{{segment}}/{{entity}}/{{#Uc_first}}{{fieldName}}{{/Uc_first}}" id="{{segment}}_{{entity}}_{{fieldName}}_EditForm"/>
 				</View>
-				<Require src="Framework/FormElementSeparator">
+				<Require src="Framework/FormElementSeparator"/>
 				
 {{/Fields}}
 			</View>
