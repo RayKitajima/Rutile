@@ -1,0 +1,60 @@
+
+"#Container" : {
+	top             : 0,
+	left            : 0,
+	backgroundColor : '#f0f0f0',
+	visible         : false,
+},
+
+"#TitleBar" : {
+	top             : "0dp",
+	left            : "0dp",
+	width           : Ti.UI.FILL,
+	height          : "44dp",
+	layout          : "horizontal",
+	backgroundColor : '#f0f0f0',
+},
+
+"#CloseButtonView" : {
+	top    : "0dp",
+	width  : "44dp",
+},
+
+"#CloseButtonSymbol" : {
+	top   : "12dp",
+	left  : "12dp",
+	color : "#c0c0c0",
+},
+
+"#CloseButtonFlame" : {
+	backgroundGradient : {
+		type        : "radial",
+		startPoint  : { x:"22dp", y:"22dp" },
+		endPoint    : { x:"22dp", y:"22dp" },
+		colors      : [ {color:"#f0f0f0",offset:0.0}, {color:"#d0d0d0",offset:1.0} ],
+		startRadius : "22dp",
+		endRadius   : 0
+	},
+	top     : "0dp",
+	left    : "0dp",
+	opacity : 0.50
+},
+
+"#Title" : {
+	top    : "0dp",
+	left   : "88dp",
+	right  : "88dp",
+	height : "44dp",
+	width  : "144dp",
+},
+
+"#SideMenuItems" : {
+	top             : "44dp",
+	left            : "0dp",
+	width           : Ti.UI.SIZE,
+	height          : Ti.UI.SIZE,
+	backgroundColor : "#f0f0f0",
+	layout          : "vertical",
+},
+
+

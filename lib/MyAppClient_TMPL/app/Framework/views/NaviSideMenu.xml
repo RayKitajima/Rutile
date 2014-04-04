@@ -1,0 +1,12 @@
+<Alloy>
+	<View id="Container" onSwipe="swipeHandler">
+		<View id="TitleBar">
+			<View id="CloseButtonView" onTouchstart="showCloseButtonFlame" onTouchend="hideCloseButtonFlame" onClick="clickCloseButton">
+				<View id="CloseButtonFlame" visible="false"></View>
+				<Label id="CloseButtonSymbol"/>
+			</View>
+			<Label class="Title" text="Ti.Locale.getString('FrameworkMessageClose')" onClick="clickCloseButton"/>
+		</View>
+		<View id="SideMenuItems"></View>
+	</View>
+</Alloy>

@@ -25,7 +25,7 @@ fi
 if [ ! -d $DST_DIR ]
 then
 	echo "creating Titanium Mobile iOS Project"
-	titanium create -n {{APP_NAME}}App -p ios --id {{APP_NAME}}App -d $WRK_DIR
+	titanium create -n {{APP_NAME}}App -p ios --id {{APP_NAME}}App --url {{APP_NAME}}App -d $WRK_DIR
 	cd {{APP_NAME}}App
 	alloy new
 	cd ..
@@ -34,6 +34,7 @@ fi
 echo "building {{APP_NAME}}App..."
 
 echo "installing generated codes"
+mkdir $DST_DIR/app
 cp -r $SRC_DIR/app/{controllers,styles,views,lib} $DST_DIR/app/.
 cp $SRC_DIR/app/alloy.js $DST_DIR/app/.
 
@@ -50,6 +51,7 @@ cp -r $SRC_DIR/modules/* $DST_DIR/modules/.
 
 echo "installing fonts"
 # fonts will be moved to the build directory once you do build this app
+mkdir $DST_DIR/app/assets
 cp -r $SRC_DIR/Resources/fonts $DST_DIR/app/assets/.
 
 echo "installing info.plist"

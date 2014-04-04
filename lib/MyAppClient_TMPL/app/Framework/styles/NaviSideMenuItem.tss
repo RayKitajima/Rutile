@@ -1,0 +1,37 @@
+
+"#ItemView" : {
+	top             : 0,
+	left            : 0,
+	width           : Ti.UI.FILL,
+	height          : "44dp",
+	backgroundColor : "#fff",
+	layout          : "horizontal",
+},
+
+"#ItemIconView" : {
+	top             : 0,
+	left            : 0,
+	width           : "44dp",
+	height          : "44dp",
+	backgroundColor : "#fff",
+},
+
+"#ItemIconSymbol" : {
+	top   : "12dp",
+	left  : "12dp",
+	color : "#777",
+},
+
+"#ItemLabelView" : {
+	top             : 0,
+	left            : "0dp",
+	width           : Ti.UI.SIZE,
+	height          : "44dp",
+	backgroundColor : "#fff",
+},
+
+"#ItemLabel" : {
+	top   : "12dp",
+	left  : "0dp",
+	color : "#777",
+}

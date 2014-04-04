@@ -1,0 +1,5 @@
+<Alloy>
+	<View id="Container">
+		<Require src="Framework/NaviSideMenu" id="SideMenu"/>
+	</View>
+</Alloy>

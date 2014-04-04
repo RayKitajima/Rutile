@@ -141,4 +141,15 @@ Define id and password field to be used, like SEGMENT/ENTITY.ID_FIELD,PASS_FIELD
 Define JSON Web Token lifetime as second.
 This will be evaluated ad JavaScript in config compiler. So you can define mathmatical expression, like 60*60*24.
 
+### UIGenerateOption
+
+Generate optional UI.
+
+#### SideMenu
+
+Geenrate client app with slide in side menu.
+By default, it has two menu, one is list of Entity, 
+another is authentication panel if with automatical implementation of authentication.
+
+
 

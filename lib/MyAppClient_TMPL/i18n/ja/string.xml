@@ -19,6 +19,7 @@
 <string name="FrameworkMessageSave">保存</string>
 <string name="FrameworkMessageRemove">削除</string>
 <string name="FrameworkMessageCancel">キャンセル</string>
+<string name="FrameworkMessageClose">閉じる</string>
 <string name="FrameworkMessageRemoveConfirmationText">選択したアイテムを削除しますか？</string>
 <string name="FrameworkMessageNoticeCollectionRemoval">(注意：コレクションテーブルのデータは削除されますが、コレクトされているアイテムは削除されません。)</string>
 <string name="FrameworkMessageSaveConfirmationText">保存しますか？</string>
@@ -35,6 +36,9 @@
 <string name="FrameworkIndicatorLoadingMessage">読み込み中・・・</string>
 <string name="FrameworkIndicatorSearchingMessage">検索中・・・</string>
 <string name="FrameworkGeolocationUnderReverseGeocoding">住所検索中・・・</string>
+<!-- predefined navigation name -->
+<string name="Navigation.EntityList">Entityリスト</string>
+<string name="Navigation.AuthPassword">認証</string>
 <!-- Framework:EditForm -->
 <string name="FrameworkSelectorBranchDescLabel">%sの選択方法を指定して下さい。</string>
 <string name="FrameworkSelectorBranchNewLabel">新規追加</string>

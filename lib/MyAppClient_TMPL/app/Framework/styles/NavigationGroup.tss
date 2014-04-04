@@ -39,7 +39,7 @@
 "#LeftButtonsView" : {
 	top    : "0dp",
 	left   : "0dp",
-	width  : "44dp",
+	width  : "88dp",
 	backgroundColor : "#85d031",
 },
 

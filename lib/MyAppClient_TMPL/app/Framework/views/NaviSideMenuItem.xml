@@ -1,0 +1,6 @@
+<Alloy>
+	<View id="ItemView" onClick="selectMenuItem">
+		<View id="ItemIconView"><Label id="ItemIconSymbol"/></View>
+		<View id="ItemLabelView"><Label id="ItemLabel"/></View>
+	</View>
+</Alloy>

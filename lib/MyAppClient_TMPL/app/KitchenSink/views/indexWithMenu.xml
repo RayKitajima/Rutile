@@ -1,0 +1,6 @@
+<Alloy>
+	<Window class="container">
+		<Require src="Framework/NavigationMenu" id="NavigationMenu"/>
+	</Window>
+</Alloy>
+

@@ -19,6 +19,7 @@
 <string name="FrameworkMessageSave">Save</string>
 <string name="FrameworkMessageRemove">Remove</string>
 <string name="FrameworkMessageCancel">Cancel</string>
+<string name="FrameworkMessageClose">Close</string>
 <string name="FrameworkMessageRemoveConfirmationText">Are you sure you want to remove selected items?</string>
 <string name="FrameworkMessageNoticeCollectionRemoval">(Notice, collection table will be removed, but collected items does not removed.)</string>
 <string name="FrameworkMessageSaveConfirmationText">Are you sure to you want to save?</string>
@@ -35,6 +36,9 @@
 <string name="FrameworkIndicatorLoadingMessage">Loading...</string>
 <string name="FrameworkIndicatorSearchingMessage">Searching...</string>
 <string name="FrameworkGeolocationUnderReverseGeocoding">Looking up address...</string>
+<!-- predefined navigation name -->
+<string name="Navigation.EntityList">EntityList</string>
+<string name="Navigation.AuthPassword">AUthorize</string>
 <!-- Framework:EditForm -->
 <string name="FrameworkSelectorBranchDescLabel">How to select %s:</string>
 <string name="FrameworkSelectorBranchNewLabel">Create new one</string>
