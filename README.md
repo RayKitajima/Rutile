@@ -43,7 +43,7 @@ Rutile provides traditional container based on them.
 ```
                [JWT]
 +--------+       :         +----------------+
-| Ti App |---(WebSocket)---| Node.js Server |....[ Logic ]
+| Ti App |---(wss|https)---| Node.js Server |....[ Logic ]
 +--------+                 +-------+--------+
                                    |
                            +-------+--------+
@@ -73,6 +73,15 @@ Client application is built on Alloy MVC framework for Titanium.
 
 
 ## Prerequisites and installation
+
+Confirmed stable version:
+
+* Node.js 0.11.10
+* Titanium SDK 3.2.3.GA
+* Titanium CLI 3.2.3
+* Alloy 1.3.1
+
+Bleeding edge:
 
 * [Node.js 0.8, 0.10, 0.11+](http://nodejs.org/dist/)
 * [PostgreSQL](http://www.postgresql.org) or [PostGIS](http://postgis.net)

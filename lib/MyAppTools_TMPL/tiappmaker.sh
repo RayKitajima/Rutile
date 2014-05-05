@@ -25,7 +25,7 @@ fi
 if [ ! -d $DST_DIR ]
 then
 	echo "creating Titanium Mobile iOS Project"
-	titanium create -n {{APP_NAME}}App -p ios --id {{APP_NAME}}App --url {{APP_NAME}}App -d $WRK_DIR
+	titanium create -n {{APP_NAME}}App -p ios --id {{APP_NAME}}App --url {{APP_NAME}}App -d $WRK_DIR -t app --log-level debug -f
 	cd {{APP_NAME}}App
 	alloy new
 	cd ..

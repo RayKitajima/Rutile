@@ -226,19 +226,27 @@ sudo npm install hiredis-simple -g
 sudo npm install pg-sync -g
 ```
 
-## etc npm packages
+## npm packages
 
 If you want to use automatical implementation of authentication logic.
 
 ```
 sudo npm install unixtime -g
-sudo npm install node-jws -g
+sudo npm install jws -g
+
 ```
 
-## socket.io
+By default, Rutile uses WebSocket for client server communication.
 
 ```
 sudo npm install socket.io -g
+```
+
+Optionally, you can select normal https access instead of WebSocket.
+
+```
+sudo npm install express -g
+sudo npm install body-parser -g
 ```
 
 ## Rutile

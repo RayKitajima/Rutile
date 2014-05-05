@@ -151,5 +151,16 @@ Geenrate client app with slide in side menu.
 By default, it has two menu, one is list of Entity, 
 another is authentication panel if with automatical implementation of authentication.
 
+### Server setting
+
+| keyword   | desc                                 | 
+|:----------|:-------------------------------------| 
+| Protocol  | Client server protocol, wss or https | 
+| AppHost   | Server ip or host name               | 
+| AppPort   | Server port                          | 
+| DBHost    | PostgreSQL ip or host name           | 
+| DBPort    | PostgreSQL port                      | 
+| CacheHost | Redis ip or host name                | 
+| CachePort | Redis port                           | 
 
 

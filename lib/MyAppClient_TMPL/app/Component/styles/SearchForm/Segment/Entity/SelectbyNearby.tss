@@ -31,3 +31,9 @@
 	width  : "95%",
 	height : Ti.UI.SIZE,
 },
+
+".Elements" : {
+	top    : "5dp",
+	width  : "95%",
+	height : Ti.UI.SIZE,
+}
