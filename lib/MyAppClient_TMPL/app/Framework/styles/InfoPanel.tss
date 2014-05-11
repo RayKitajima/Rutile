@@ -37,6 +37,6 @@
 	left  : "10dp",
 	color : "#fff",
 	font  : { fontSize:12, fontWeight:"bold" },
-},
+}
 
 

@@ -8,4 +8,4 @@
 	color  : '#55c',
 	font   : { fontSize:12, fontWeight:'normal' },
 	left   : "10dp",
-},
+}

@@ -14,5 +14,5 @@
 	width     : Ti.UI.SIZE,
 	left      : "60dp",
 	font      : { fontSize:16, fontWeight:'bold' }
-},
+}
 

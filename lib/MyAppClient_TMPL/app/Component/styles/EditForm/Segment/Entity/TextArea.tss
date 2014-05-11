@@ -12,5 +12,5 @@
 	width : Ti.UI.FILL,
 	color : '#000',
 	font  : { fontSize:12, fontWeight:'bold' }
-},
+}
 

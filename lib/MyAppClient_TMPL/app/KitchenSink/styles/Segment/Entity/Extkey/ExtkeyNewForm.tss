@@ -37,4 +37,4 @@
 ".SectionItem" : {
 	height          : Ti.UI.SIZE,
 	backgroundColor : "#f7f7f7",
-},
+}

@@ -22,4 +22,4 @@
 	borderWidth             : 0,
 	backgroundColor         : '#f7f7f7',
 	selectedBackgroundColor : '#f7f7f7',
-},
+}

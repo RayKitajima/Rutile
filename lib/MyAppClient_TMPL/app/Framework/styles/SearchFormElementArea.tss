@@ -34,4 +34,4 @@
 	selectedBackgroundColor : '#f7f7f7',
 	keyboardType            : Ti.UI.KEYBOARD_NUMBERS_PUNCTUATION,
 	autocapitalization      : Ti.UI.TEXT_AUTOCAPITALIZATION_NONE,
-},
+}

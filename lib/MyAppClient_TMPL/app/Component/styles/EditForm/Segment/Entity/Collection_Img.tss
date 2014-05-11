@@ -18,4 +18,4 @@
 	width        : "95%",
 	height       : Ti.UI.SIZE,
 	layout       : "vertical",
-},
+}

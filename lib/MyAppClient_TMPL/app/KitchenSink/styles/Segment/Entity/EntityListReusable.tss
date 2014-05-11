@@ -18,5 +18,5 @@
 	width     : Ti.UI.FILL,
 	textAlign : 'left',
 	font      : { fontSize:16, fontWeight:'bold' }
-},
+}
 

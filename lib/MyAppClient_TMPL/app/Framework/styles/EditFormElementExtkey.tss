@@ -19,5 +19,5 @@
  	height : Ti.UI.FILL,
 	color  : '#55c',
 	font   : { fontSize:12, fontWeight:'normal' },
-},
+}
 

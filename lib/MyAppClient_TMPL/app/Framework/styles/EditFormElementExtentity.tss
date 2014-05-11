@@ -10,4 +10,4 @@
 	height          : "44dp",
 	backgroundColor : "#f7f7f7",
 	layout          : "horizontal",
-},
+}

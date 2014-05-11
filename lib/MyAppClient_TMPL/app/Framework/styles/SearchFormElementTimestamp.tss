@@ -45,5 +45,5 @@
 	color           : '#55c',
 	font            : { fontSize:12, fontWeight:'normal' },
 	backgroundColor : '#f7f7f7',
-},
+}
 

@@ -3,4 +3,4 @@
 	top     : "0dp",
 	width   : Ti.UI.SIZE,
 	layout  : "vertical",
-},
+}

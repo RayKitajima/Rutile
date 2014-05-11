@@ -11,5 +11,5 @@
 	width : "95dp",
 	color : '#000',
 	font  : { fontSize:12, fontWeight:'bold' }
-},
+}
 

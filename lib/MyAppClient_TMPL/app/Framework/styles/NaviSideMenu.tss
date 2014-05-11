@@ -55,6 +55,6 @@
 	height          : Ti.UI.SIZE,
 	backgroundColor : "#f0f0f0",
 	layout          : "vertical",
-},
+}
 
 
