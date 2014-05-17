@@ -160,6 +160,8 @@ another is authentication panel if with automatical implementation of authentica
 | AppPort   | Server port                          | 
 | DBHost    | PostgreSQL ip or host name           | 
 | DBPort    | PostgreSQL port                      | 
+| DBUser    | PostgreSQL user name                 |
+| DBPass    | PostgreSQL user password             |
 | CacheHost | Redis ip or host name                | 
 | CachePort | Redis port                           | 
 
