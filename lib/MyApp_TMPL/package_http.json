@@ -1,0 +1,15 @@
+{
+	"name" : "{{APP_NAME}}",
+	"description" : "{{APP_NAME}} server package",
+	"main" : "{{APP_NAME}}.js",
+	"repository": {},
+	"dependencies" : {
+		"pg-sync":"0.0.1",
+		"hiredis-simple":"0.0.1",
+		"express":"4.2.0",
+		"body-parser":"1.2.0",
+		"jws":"0.2.5",
+		"unixtime":"0.0.1"
+	},
+	"engines" : { "node": ">= 0.8.0" }
+}
