@@ -200,7 +200,21 @@ var instances = context['response,serial'][i].result;
 The result set of search method is an array of instances.
 You can get this array by app.result.
 
-No search implementation is generated for the Collection.
+NOTE: No search implementation is generated for the Collection.
+
+NOTE: If you want to cap search result, you can add limit property for constraint element or search parameter.
+
+```javascript
+var app = {
+	apptag : "Order/OrderItem.search",
+	params : {
+		constraint: {
+			"Order/OrderItem.name(like)" : { values:["Apple","Orange"], limit:80 },
+			"Product/Product.price(num)" : { min:100, max:200, limit:80 }
+		},
+		limit : 100,
+	}
+};
 
 
 ### launch
