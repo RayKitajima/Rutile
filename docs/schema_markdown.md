@@ -31,6 +31,12 @@ sequence:productSeq(1000)
 	depositoryID	int			DepositoryID	key					-				helper:Product/Depository
 	registerDate	timestamp	Registered Date	timestamp,orderby	timestampString
 
+	data:
+	1	Apple		200		1	2013-01-01
+	2	Orange		300		1	2013-02-01
+	3	Banana		400		1	2013-03-01
+	4	Strawberry	150		2	2013-04-01
+
 * ProductProductImage (Product-ProductImage)
 
 	collector/collected*					type*
@@ -257,5 +263,12 @@ Collection should have two field style definitions, collector and collected.
 It means the former owns the latter.
 Both lines should be a primary key expression represented by Segment/Entity.primaryKey.
 
+## Predefined data
 
+You can append predefined data entry for yor Entity and Collection.
+
+Data definition should be after your field definition, starting with **data:**.
+Each value should be separated by tab.
+
+See the Sample and [rutile_kickstart/README.md](https://github.com/RayKitajima/rutile_kickstart/tree/master/1st_step/en)
 

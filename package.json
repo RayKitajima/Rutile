@@ -16,7 +16,8 @@
 		"postgresql",
 		"redis",
 		"generator",
-		"MDA"
+		"MDA",
+		"ORM"
 	],
 	"version": "0.1.9",
 	"author": {
