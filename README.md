@@ -74,7 +74,12 @@ Client application is built on Alloy MVC framework for Titanium.
 
 ## Prerequisites and installation
 
-Confirmed stable version:
+Confirmed stable versions:
+
+* Node.js 0.10.29
+* Titanium SDK 3.3.0.GA
+* Titanium CLI 3.3.0 / 3.4.0-dev
+* Alloy 1.4.0
 
 * Node.js 0.11.10
 * Titanium SDK 3.2.3.GA
