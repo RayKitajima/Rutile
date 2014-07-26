@@ -28,8 +28,11 @@ Get the latest bleeding edge CLI, SDK and Alloy
 
 ### CLI
 
+If failed to create new project with latest GA version or some other error while generating your app, try to install titanium CLI from github.
+
 ```
-sudo npm install -g git://github.com/appcelerator/titanium.git
+sudo npm install -g titanium                                    // latest release version
+sudo npm install -g git://github.com/appcelerator/titanium.git  // bleeding edge
 ```
 
 ### SDK
@@ -37,7 +40,8 @@ sudo npm install -g git://github.com/appcelerator/titanium.git
 To install Ti sdk, you need to get your Appcelerator developer account.
 
 ```
-titanium sdk install -b master -d
+titanium sdk install                  // latest release version
+titanium sdk install -b master -d     // bleeding edge
 
 Username: 
 Password: 
@@ -50,7 +54,8 @@ SDK will be installed in your ~/Library.
 ### Alloy
 
 ```
-sudo npm install -g git://github.com/appcelerator/alloy.git
+sudo npm install -g alloy                                    // latest release version
+sudo npm install -g git://github.com/appcelerator/alloy.git  // bleeding edge
 ```
 
 ### node-appc
